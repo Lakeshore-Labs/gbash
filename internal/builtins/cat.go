@@ -179,11 +179,11 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 
 	if state.pendingCarriageReturn {
 		if opts.showNonprint {
-			if _, err := io.WriteString(inv.Stdout, "^M"); err != nil {
+			if _, err := io.WriteString(inv.Stdout, "^M"); err != nil && ctx.Err() == nil {
 				return catWriteExitError(inv, err)
 			}
 		} else {
-			if _, err := inv.Stdout.Write([]byte{'\r'}); err != nil {
+			if _, err := inv.Stdout.Write([]byte{'\r'}); err != nil && ctx.Err() == nil {
 				return catWriteExitError(inv, err)
 			}
 		}
