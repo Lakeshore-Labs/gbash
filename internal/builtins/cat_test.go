@@ -203,3 +203,17 @@ func TestCatReportsAWriteError(t *testing.T) {
 		t.Fatalf("got exit=%d stderr=%q", result.ExitCode, stderr.String())
 	}
 }
+
+func TestCatStopsQuietlyWhenCancelled(t *testing.T) {
+	t.Parallel()
+	rt := newRuntime(t, &Config{})
+	result, err := rt.Run(context.Background(), &ExecutionRequest{
+		Script: "echo a > /tmp/a\nsleep 5 | timeout 0.2 cat - /tmp/a\n",
+	})
+	if err != nil {
+		t.Fatalf("Run() error = %v", err)
+	}
+	if result.ExitCode != 124 || strings.Contains(result.Stderr, "cat:") || result.Stdout != "" {
+		t.Fatalf("got exit=%d stdout=%q stderr=%q", result.ExitCode, result.Stdout, result.Stderr)
+	}
+}

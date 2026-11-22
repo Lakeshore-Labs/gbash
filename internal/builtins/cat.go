@@ -136,6 +136,9 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		}
 	}
 	for _, name := range names {
+		if err := ctx.Err(); err != nil {
+			return err
+		}
 		if catWouldUnsafeOverwrite(inv, name) {
 			fail(name + ": input file is output file")
 			continue
@@ -152,6 +155,10 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		err = writeCatInput(inv.Stdout, input, opts, &state)
 		if input.close != nil {
 			input.close()
+		}
+		if ctx.Err() != nil {
+			// Canceled: what failed is the cancel, not the input or output.
+			return ctx.Err()
 		}
 		var readErr catReadError
 		if errors.As(err, &readErr) {
