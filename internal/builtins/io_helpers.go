@@ -2,9 +2,12 @@ package builtins
 
 import (
 	"context"
+	"errors"
 	"io"
+	stdfs "io/fs"
 
 	"github.com/ewhauser/gbash/commands"
+	"github.com/ewhauser/gbash/policy"
 )
 
 func readAllFile(ctx context.Context, inv *Invocation, name string) (data []byte, abs string, err error) {
@@ -35,6 +38,8 @@ func readAllErrorText(err error) string {
 		return "No such file or directory"
 	case errorsIsDirectory(err):
 		return "Is a directory"
+	case errors.Is(err, stdfs.ErrPermission) && !policy.IsDenied(err):
+		return "Permission denied"
 	default:
 		return err.Error()
 	}

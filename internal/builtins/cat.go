@@ -11,7 +11,6 @@ import (
 	"syscall"
 
 	"github.com/ewhauser/gbash/internal/commandutil"
-	"github.com/ewhauser/gbash/policy"
 )
 
 type Cat struct{}
@@ -131,11 +130,7 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 	}
 	var failures []string
 	for _, name := range names {
-		unsafe, err := catWouldUnsafeOverwrite(ctx, inv, name)
-		if err != nil {
-			return err
-		}
-		if unsafe {
+		if catWouldUnsafeOverwrite(inv, name) {
 			failures = append(failures, fmt.Sprintf("%s: input file is output file", name))
 			continue
 		}
@@ -177,7 +172,7 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 	for _, failure := range failures {
 		_, _ = fmt.Fprintf(inv.Stderr, "cat: %s\n", failure)
 	}
-	return &ExitError{Code: len(failures), Err: errors.New("cat: " + failures[0])}
+	return &ExitError{Code: 1, Err: errors.New("cat: " + failures[0])}
 }
 
 func catOptionsFromParsed(matches *ParsedCommand) catOptions {
@@ -195,70 +190,47 @@ func catOptionsFromParsed(matches *ParsedCommand) catOptions {
 	return opts
 }
 
-func catWouldUnsafeOverwrite(ctx context.Context, inv *Invocation, name string) (bool, error) {
+// catWouldUnsafeOverwrite reports whether reading name would overwrite the
+// shell redirect cat writes to, or whether stdin is the host file it writes
+// to. A named input against a host file is checked once it is open, by
+// catIsOutputFile.
+func catWouldUnsafeOverwrite(inv *Invocation, name string) bool {
 	outputWriter := catResolveWriter(inv.Stdout)
 	output, ok := outputWriter.(catRedirectHandle)
 	if ok && output.RedirectPath() != "" {
 		if name == "-" {
 			input, ok := catResolveReader(inv.Stdin).(catRedirectHandle)
 			if !ok || input.RedirectPath() == "" || input.RedirectPath() != output.RedirectPath() {
-				return false, nil
+				return false
 			}
-			return catIsUnsafeOverwrite(input.RedirectOffset(), output), nil
+			return catIsUnsafeOverwrite(input.RedirectOffset(), output)
 		}
-
-		abs := allowPath(inv, name)
-		if abs != output.RedirectPath() {
-			return false, nil
-		}
-		return catIsUnsafeOverwrite(0, output), nil
+		return allowPath(inv, name) == output.RedirectPath() && catIsUnsafeOverwrite(0, output)
 	}
-
+	if name != "-" {
+		return false
+	}
 	outputHost, ok := outputWriter.(catHostHandle)
 	if !ok {
-		return false, nil
+		return false
 	}
-	if name == "-" {
-		inputHost, ok := catResolveReader(inv.Stdin).(catHostHandle)
-		if !ok {
-			return false, nil
-		}
-		return catIsUnsafeHostOverwrite(inputHost, outputHost), nil
-	}
+	inputHost, ok := catResolveReader(inv.Stdin).(catHostHandle)
+	return ok && catIsUnsafeHostOverwrite(inputHost, outputHost)
+}
 
-	info, _, err := statPath(ctx, inv, name)
-	if err != nil {
-		if policy.IsDenied(err) {
-			return false, err
-		}
-		// Let the read below report a missing or unreadable input.
-		return false, nil
+// catIsOutputFile reports whether the opened input, described by info, is the
+// host file cat writes to, with unread output still ahead of it. Like GNU cat
+// it compares the open file, not its path.
+func catIsOutputFile(inv *Invocation, info stdfs.FileInfo) bool {
+	outputHost, ok := catResolveWriter(inv.Stdout).(catHostHandle)
+	if !ok || info == nil || !info.Mode().IsRegular() {
+		return false
 	}
 	outputInfo, err := outputHost.Stat()
-	if err != nil {
-		return false, nil
+	if err != nil || !outputInfo.Mode().IsRegular() || !testSameFile(info, outputInfo) {
+		return false
 	}
-	if !info.Mode().IsRegular() || !outputInfo.Mode().IsRegular() {
-		// Only a regular file can be overwritten while cat reads it. Opening
-		// any other input to compare it would also consume one-shot sources
-		// such as a process substitution before cat reads them.
-		return false, nil
-	}
-	if !testSameFile(info, outputInfo) {
-		file, _, openErr := openRead(ctx, inv, name)
-		if openErr != nil {
-			if policy.IsDenied(openErr) {
-				return false, openErr
-			}
-			return false, nil
-		}
-		defer func() { _ = file.Close() }()
-		info, err = file.Stat()
-		if err != nil || !testSameFile(info, outputInfo) {
-			return false, nil
-		}
-	}
-	return catUnsafeByOffsets(0, outputInfo.Size(), catHostAppendMode(outputHost), catHostOffset(outputHost)), nil
+	return catUnsafeByOffsets(0, outputInfo.Size(), catHostAppendMode(outputHost), catHostOffset(outputHost))
 }
 
 func catResolveReader(reader io.Reader) io.Reader {
@@ -348,6 +320,10 @@ func readCatInput(ctx context.Context, inv *Invocation, name string) (catInput, 
 	if statErr == nil && info != nil && info.IsDir() {
 		_ = file.Close()
 		return catInput{label: abs}, errors.New("is a directory")
+	}
+	if statErr == nil && catIsOutputFile(inv, info) {
+		_ = file.Close()
+		return catInput{label: abs}, errors.New("input file is output file")
 	}
 	shouldStream := statErr != nil || catShouldStreamInfo(info)
 	if shouldStream {
