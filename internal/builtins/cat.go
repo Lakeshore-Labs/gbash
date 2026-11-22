@@ -153,7 +153,7 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 			if input.close != nil {
 				input.close()
 			}
-			return catWriteExitError(err)
+			return catWriteExitError(inv, err)
 		}
 		if input.close != nil {
 			input.close()
@@ -163,11 +163,11 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 	if state.pendingCarriageReturn {
 		if opts.showNonprint {
 			if _, err := io.WriteString(inv.Stdout, "^M"); err != nil {
-				return catWriteExitError(err)
+				return catWriteExitError(inv, err)
 			}
 		} else {
 			if _, err := inv.Stdout.Write([]byte{'\r'}); err != nil {
-				return catWriteExitError(err)
+				return catWriteExitError(inv, err)
 			}
 		}
 	}
@@ -202,7 +202,10 @@ func catWouldUnsafeOverwrite(inv *Invocation, name string) bool {
 	if ok && output.RedirectPath() != "" {
 		if name == "-" {
 			input, ok := catResolveReader(inv.Stdin).(catRedirectHandle)
-			if !ok || input.RedirectPath() == "" || input.RedirectPath() != output.RedirectPath() {
+			if !ok || input.RedirectPath() == "" {
+				return false
+			}
+			if input.RedirectPath() != output.RedirectPath() && !catSameFile(input, output) {
 				return false
 			}
 			return catIsUnsafeOverwrite(input.RedirectOffset(), output)
@@ -241,6 +244,14 @@ func catIsOutputFile(inv *Invocation, info stdfs.FileInfo) bool {
 		return false
 	}
 	return catUnsafeByOffsets(0, outputInfo.Size(), catHostAppendMode(outputHost), catHostOffset(outputHost))
+}
+
+// catSameFile reports whether a and b are one file, such as a hard link and
+// its target.
+func catSameFile(a, b catStatHandle) bool {
+	infoA, errA := a.Stat()
+	infoB, errB := b.Stat()
+	return errA == nil && errB == nil && testSameFile(infoA, infoB)
 }
 
 func catResolveReader(reader io.Reader) io.Reader {
@@ -497,12 +508,15 @@ func writeCatData(w io.Writer, data []byte, opts catOptions, state *catOutputSta
 	return nil
 }
 
-func catWriteExitError(err error) error {
+func catWriteExitError(inv *Invocation, err error) error {
 	if err == nil {
 		return nil
 	}
 	if catBrokenPipe(err) {
 		return &ExitError{Code: 141}
+	}
+	if diag, ok := shellWriteErrorDiagnostic("cat", err); ok {
+		return exitf(inv, 1, "%s", diag)
 	}
 	return &ExitError{Code: 1, Err: err}
 }
