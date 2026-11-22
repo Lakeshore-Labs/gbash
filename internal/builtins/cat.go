@@ -149,14 +149,17 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 			fail(catErrorMessage(name, catInputLabel(input, name), err))
 			continue
 		}
-		if err := writeCatInput(inv.Stdout, input, opts, &state); err != nil {
-			if input.close != nil {
-				input.close()
-			}
-			return catWriteExitError(inv, err)
-		}
+		err = writeCatInput(inv.Stdout, input, opts, &state)
 		if input.close != nil {
 			input.close()
+		}
+		var readErr catReadError
+		if errors.As(err, &readErr) {
+			fail(catErrorMessage(name, catInputLabel(input, name), readErr.err))
+			continue
+		}
+		if err != nil {
+			return catWriteExitError(inv, err)
 		}
 	}
 
@@ -442,9 +445,15 @@ func writeCatReader(w io.Writer, reader io.Reader, opts catOptions, state *catOu
 		if errors.Is(err, io.EOF) {
 			return nil
 		}
-		return err
+		return catReadError{err}
 	}
 }
+
+// catReadError is a failure to read an input, which cat reports and moves past,
+// as against a failure to write its output, which ends it.
+type catReadError struct{ err error }
+
+func (e catReadError) Error() string { return e.err.Error() }
 
 func writeCatData(w io.Writer, data []byte, opts catOptions, state *catOutputState) error {
 	if state == nil {
@@ -515,10 +524,7 @@ func catWriteExitError(inv *Invocation, err error) error {
 	if catBrokenPipe(err) {
 		return &ExitError{Code: 141}
 	}
-	if diag, ok := shellWriteErrorDiagnostic("cat", err); ok {
-		return exitf(inv, 1, "%s", diag)
-	}
-	return &ExitError{Code: 1, Err: err}
+	return exitf(inv, 1, "cat: write error: %s", shellWriteErrorText(err))
 }
 
 func catBrokenPipe(err error) bool {

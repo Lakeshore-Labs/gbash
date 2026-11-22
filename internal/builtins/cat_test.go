@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"strings"
+	"syscall"
 	"testing"
 
 	"github.com/ewhauser/gbash/policy"
@@ -164,4 +165,41 @@ func runCatToHostFile(t *testing.T, cfg *Config, script string) (int, string) {
 		t.Fatalf("Run() error = %v", err)
 	}
 	return result.ExitCode, stderr.String()
+}
+
+func TestCatReportsAReadErrorAndGoesOn(t *testing.T) {
+	t.Parallel()
+	rt := newRuntime(t, &Config{})
+	result, err := rt.Run(context.Background(), &ExecutionRequest{
+		Script: "mkdir /tmp/d\necho a > /tmp/a\ncat - /tmp/a < /tmp/d\n",
+	})
+	if err != nil {
+		t.Fatalf("Run() error = %v", err)
+	}
+	if result.ExitCode != 1 || result.Stdout != "a\n" || result.Stderr != "cat: -: Is a directory\n" {
+		t.Fatalf("got exit=%d stdout=%q stderr=%q", result.ExitCode, result.Stdout, result.Stderr)
+	}
+}
+
+type failingWriter struct{}
+
+func (failingWriter) Write([]byte) (int, error) {
+	return 0, &os.PathError{Op: "write", Path: "/dev/stdout", Err: syscall.ENOSPC}
+}
+
+func TestCatReportsAWriteError(t *testing.T) {
+	t.Parallel()
+	rt := newRuntime(t, &Config{})
+	var stderr strings.Builder
+	result, err := rt.Run(context.Background(), &ExecutionRequest{
+		Script: "echo a > /tmp/a\ncat /tmp/a\n",
+		Stdout: failingWriter{},
+		Stderr: &stderr,
+	})
+	if err != nil {
+		t.Fatalf("Run() error = %v", err)
+	}
+	if result.ExitCode != 1 || stderr.String() != "cat: write error: No space left on device\n" {
+		t.Fatalf("got exit=%d stderr=%q", result.ExitCode, stderr.String())
+	}
 }
