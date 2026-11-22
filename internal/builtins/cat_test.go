@@ -208,7 +208,7 @@ func TestCatStopsQuietlyWhenCancelled(t *testing.T) {
 	t.Parallel()
 	rt := newRuntime(t, &Config{})
 	result, err := rt.Run(context.Background(), &ExecutionRequest{
-		Script: "echo a > /tmp/a\nsleep 5 | timeout 0.2 cat - /tmp/a\n",
+		Script: "echo a > /tmp/a\nsleep 1 | timeout 0.2 cat - /tmp/a\n",
 	})
 	if err != nil {
 		t.Fatalf("Run() error = %v", err)

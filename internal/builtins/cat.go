@@ -135,9 +135,11 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 			firstFailure = message
 		}
 	}
+	// A canceled command ends the loop: what failed is the cancel, not an input
+	// or the output, so nothing is reported for it.
 	for _, name := range names {
-		if err := ctx.Err(); err != nil {
-			return err
+		if ctx.Err() != nil {
+			break
 		}
 		if catWouldUnsafeOverwrite(inv, name) {
 			fail(name + ": input file is output file")
@@ -145,6 +147,12 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		}
 
 		input, err := readCatInput(ctx, inv, name)
+		if ctx.Err() != nil {
+			if input.close != nil {
+				input.close()
+			}
+			break
+		}
 		if err != nil {
 			if code, ok := ExitCode(err); ok && code == 126 {
 				return err
@@ -157,8 +165,7 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 			input.close()
 		}
 		if ctx.Err() != nil {
-			// Canceled: what failed is the cancel, not the input or output.
-			return ctx.Err()
+			break
 		}
 		var readErr catReadError
 		if errors.As(err, &readErr) {
@@ -182,6 +189,9 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		}
 	}
 
+	if err := ctx.Err(); err != nil {
+		return err
+	}
 	if firstFailure == "" {
 		return nil
 	}
