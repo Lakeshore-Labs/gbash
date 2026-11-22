@@ -128,10 +128,16 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		lineNumber:  1,
 		atLineStart: true,
 	}
-	var failures []string
+	var firstFailure string
+	fail := func(message string) {
+		_, _ = fmt.Fprintf(inv.Stderr, "cat: %s\n", message)
+		if firstFailure == "" {
+			firstFailure = message
+		}
+	}
 	for _, name := range names {
 		if catWouldUnsafeOverwrite(inv, name) {
-			failures = append(failures, fmt.Sprintf("%s: input file is output file", name))
+			fail(name + ": input file is output file")
 			continue
 		}
 
@@ -140,7 +146,7 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 			if code, ok := ExitCode(err); ok && code == 126 {
 				return err
 			}
-			failures = append(failures, catErrorMessage(name, catInputLabel(input, name), err))
+			fail(catErrorMessage(name, catInputLabel(input, name), err))
 			continue
 		}
 		if err := writeCatInput(inv.Stdout, input, opts, &state); err != nil {
@@ -166,13 +172,10 @@ func (c *Cat) RunParsed(ctx context.Context, inv *Invocation, matches *ParsedCom
 		}
 	}
 
-	if len(failures) == 0 {
+	if firstFailure == "" {
 		return nil
 	}
-	for _, failure := range failures {
-		_, _ = fmt.Fprintf(inv.Stderr, "cat: %s\n", failure)
-	}
-	return &ExitError{Code: 1, Err: errors.New("cat: " + failures[0])}
+	return &ExitError{Code: 1, Err: errors.New("cat: " + firstFailure)}
 }
 
 func catOptionsFromParsed(matches *ParsedCommand) catOptions {
@@ -190,10 +193,9 @@ func catOptionsFromParsed(matches *ParsedCommand) catOptions {
 	return opts
 }
 
-// catWouldUnsafeOverwrite reports whether reading name would overwrite the
-// shell redirect cat writes to, or whether stdin is the host file it writes
-// to. A named input against a host file is checked once it is open, by
-// catIsOutputFile.
+// catWouldUnsafeOverwrite reports, before any input is opened, whether name is
+// the path of the shell redirect cat writes to, or whether stdin is the file it
+// writes to. Every named input is checked again once open, by catIsOutputFile.
 func catWouldUnsafeOverwrite(inv *Invocation, name string) bool {
 	outputWriter := catResolveWriter(inv.Stdout)
 	output, ok := outputWriter.(catRedirectHandle)
@@ -219,11 +221,19 @@ func catWouldUnsafeOverwrite(inv *Invocation, name string) bool {
 }
 
 // catIsOutputFile reports whether the opened input, described by info, is the
-// host file cat writes to, with unread output still ahead of it. Like GNU cat
-// it compares the open file, not its path.
+// file cat writes to, with unread output still ahead of it. Like GNU cat it
+// compares the open file, not its path, so a hard link to the output counts.
 func catIsOutputFile(inv *Invocation, info stdfs.FileInfo) bool {
-	outputHost, ok := catResolveWriter(inv.Stdout).(catHostHandle)
-	if !ok || info == nil || !info.Mode().IsRegular() {
+	if info == nil || !info.Mode().IsRegular() {
+		return false
+	}
+	outputWriter := catResolveWriter(inv.Stdout)
+	if output, ok := outputWriter.(catRedirectHandle); ok && output.RedirectPath() != "" {
+		outputInfo, err := output.Stat()
+		return err == nil && testSameFile(info, outputInfo) && catIsUnsafeOverwrite(0, output)
+	}
+	outputHost, ok := outputWriter.(catHostHandle)
+	if !ok {
 		return false
 	}
 	outputInfo, err := outputHost.Stat()
