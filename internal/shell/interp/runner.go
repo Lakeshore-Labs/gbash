@@ -1237,9 +1237,6 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 			r.cmd(ctx, st.Cmd)
 		}
 	}
-	if !r.pipeStatusSet && stmtShouldMaterializePipeStatus(st, hadPipeStatus) {
-		r.setPipeStatuses(r.exit.code)
-	}
 	keepRedirs := r.keepRedirs
 	r.keepRedirs = false
 	if keepRedirs {
@@ -1260,6 +1257,9 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 			}
 		}
 		r.waitProcSubsts(procSubstStart)
+	}
+	if !r.pipeStatusSet && stmtShouldMaterializePipeStatus(st, hadPipeStatus) {
+		r.setPipeStatuses(r.exit.code)
 	}
 	// After exec keeps a >(cmd) redirection open, cmd reads until the shell
 	// exits, so it is joined by [Runner.StopJobs] rather than here.
