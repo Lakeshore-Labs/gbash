@@ -1247,9 +1247,17 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 			r.markNamedFDReleased(name)
 		}
 	}
+	// A file that fails only when it is closed, such as one uploaded on close, fails the command that wrote it.
+	// The error is printed once the shell's own stderr is back, since the redirected one may be that file.
+	var closeErr error
 	if !keepRedirs {
 		for i := len(closers) - 1; i >= 0; i-- {
-			_ = closers[i].Close()
+			if err := closers[i].Close(); err != nil && closeErr == nil {
+				closeErr = err
+				if r.exit.ok() {
+					r.exit.code = 1
+				}
+			}
 		}
 		r.waitProcSubsts(procSubstStart)
 	}
@@ -1280,6 +1288,9 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 		}
 		r.popFDSnapshot()
 		r.syncStandardFDs()
+		if closeErr != nil {
+			r.errf("%v\n", closeErr)
+		}
 	} else {
 		r.popFDSnapshot()
 		r.closeUnusedSnapshotFDs(oldFDs)
