@@ -6,10 +6,10 @@ import (
 	"io"
 	"maps"
 
-	"github.com/ewhauser/gbash/internal/shellstate"
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func (r *Runner) setStdIO(in io.Reader, out, err io.Writer) error {

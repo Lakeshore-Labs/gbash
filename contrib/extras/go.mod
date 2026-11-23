@@ -1,15 +1,15 @@
-module github.com/ewhauser/gbash/contrib/extras
+module github.com/Lakeshore-Labs/gbash/contrib/extras
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
-	github.com/ewhauser/gbash/contrib/awk v0.0.41
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.41
-	github.com/ewhauser/gbash/contrib/jq v0.0.41
-	github.com/ewhauser/gbash/contrib/python v0.0.41
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.41
-	github.com/ewhauser/gbash/contrib/yq v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/python v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.42
 )
 
 require (
@@ -57,16 +57,16 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..
 
-replace github.com/ewhauser/gbash/contrib/awk => ../awk
+replace github.com/Lakeshore-Labs/gbash/contrib/awk => ../awk
 
-replace github.com/ewhauser/gbash/contrib/htmltomarkdown => ../htmltomarkdown
+replace github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown => ../htmltomarkdown
 
-replace github.com/ewhauser/gbash/contrib/jq => ../jq
+replace github.com/Lakeshore-Labs/gbash/contrib/jq => ../jq
 
-replace github.com/ewhauser/gbash/contrib/python => ../python
+replace github.com/Lakeshore-Labs/gbash/contrib/python => ../python
 
-replace github.com/ewhauser/gbash/contrib/sqlite3 => ../sqlite3
+replace github.com/Lakeshore-Labs/gbash/contrib/sqlite3 => ../sqlite3
 
-replace github.com/ewhauser/gbash/contrib/yq => ../yq
+replace github.com/Lakeshore-Labs/gbash/contrib/yq => ../yq

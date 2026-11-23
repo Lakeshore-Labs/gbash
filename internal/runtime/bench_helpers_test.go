@@ -7,7 +7,7 @@ import (
 	"path"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type benchmarkFSBackend struct {

@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/fuzztest"
-	"github.com/ewhauser/gbash/policy"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/fuzztest"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const (

@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 )
 
 const (

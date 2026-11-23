@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestMaxCommandCountEnforced(t *testing.T) {

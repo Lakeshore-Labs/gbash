@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func TestAnalysisVariableWriteEventClonesVariableValues(t *testing.T) {

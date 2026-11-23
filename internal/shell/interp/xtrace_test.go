@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func runInterpNode(t *testing.T, src string) (string, string, error) {

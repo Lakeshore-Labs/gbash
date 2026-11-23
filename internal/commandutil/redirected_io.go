@@ -6,7 +6,7 @@ import (
 	"os"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type RedirectMetadata interface {

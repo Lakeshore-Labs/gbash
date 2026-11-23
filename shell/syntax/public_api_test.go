@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shell/syntax/typedjson"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax/typedjson"
 )
 
 func parseFile(t *testing.T, src string) *syntax.File {

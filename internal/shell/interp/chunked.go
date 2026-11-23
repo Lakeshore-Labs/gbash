@@ -8,8 +8,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // ChunkTransformer can mutate a parsed chunk before execution and optionally

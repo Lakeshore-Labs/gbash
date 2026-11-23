@@ -9,7 +9,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/printfutil"
+	"github.com/Lakeshore-Labs/gbash/internal/printfutil"
 )
 
 type Find struct{}

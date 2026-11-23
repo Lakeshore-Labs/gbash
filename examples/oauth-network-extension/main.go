@@ -17,9 +17,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 const (

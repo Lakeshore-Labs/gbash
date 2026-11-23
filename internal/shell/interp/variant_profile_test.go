@@ -5,8 +5,8 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func TestRunnerParserLangUsesShellVariantProfile(t *testing.T) {

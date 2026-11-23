@@ -4,8 +4,8 @@ import (
 	"io"
 	"time"
 
-	internalruntime "github.com/ewhauser/gbash/internal/runtime"
-	"github.com/ewhauser/gbash/trace"
+	internalruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 // ExecutionRequest describes a single shell execution.

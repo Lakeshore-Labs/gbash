@@ -17,9 +17,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 	monty "github.com/ewhauser/gomonty"
 	montyvfs "github.com/ewhauser/gomonty/vfs"
 	"golang.org/x/term"

@@ -4,7 +4,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 // Config controls how [Run] presents and configures the shared gbash CLI

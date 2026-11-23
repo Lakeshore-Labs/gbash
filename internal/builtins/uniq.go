@@ -12,7 +12,7 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type Uniq struct{}

@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/interp"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/parser"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/interp"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/parser"
 )
 
 const (

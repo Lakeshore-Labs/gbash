@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
 )
 
 type Complete struct{}

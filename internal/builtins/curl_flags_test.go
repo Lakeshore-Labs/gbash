@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/network"
 )
 
 type curlStubClient struct {

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 const cdResolveCommandName = "__jb_cd_resolve"

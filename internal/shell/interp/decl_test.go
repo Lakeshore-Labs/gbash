@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func TestDeclOperands(t *testing.T) {

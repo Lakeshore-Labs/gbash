@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func TestMountableFileSystemHelperSupportsCrossMountMove(t *testing.T) {

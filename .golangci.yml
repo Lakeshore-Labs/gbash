@@ -35,7 +35,7 @@ linters:
         type: module
         description: Static analysis tool to detect potential nil panics in Go code.
         settings:
-          include-pkgs: github.com/ewhauser/gbash
+          include-pkgs: github.com/Lakeshore-Labs/gbash
       regexponce:
         type: module
         description: Linter that checks regexp.Compile and friends are called only once at initialization.

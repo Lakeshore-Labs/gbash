@@ -12,9 +12,9 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/contrib/extras"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/contrib/extras"
 )
 
 type ScriptedCommandKind string

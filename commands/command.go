@@ -8,8 +8,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 // Command is the runtime contract for a custom gbash command.

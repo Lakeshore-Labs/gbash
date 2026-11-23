@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 func TestAWKStopsInfiniteLoopOnTimeout(t *testing.T) {

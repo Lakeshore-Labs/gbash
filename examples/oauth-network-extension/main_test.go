@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/network"
 )
 
 func TestRunDemoInjectsOAuthWithoutLeakingSecret(t *testing.T) {

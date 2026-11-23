@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 // yqSlowLowMemoryScript builds a 300-element array and runs a 27M-iteration

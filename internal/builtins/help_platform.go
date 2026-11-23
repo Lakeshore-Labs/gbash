@@ -3,7 +3,7 @@ package builtins
 import (
 	"strings"
 
-	"github.com/ewhauser/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/host"
 )
 
 const hostOSEnvKey = "GBASH_HOST_OS"

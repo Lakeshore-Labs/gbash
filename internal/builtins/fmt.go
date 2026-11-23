@@ -8,7 +8,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/internal/runewidth"
+	"github.com/Lakeshore-Labs/gbash/internal/runewidth"
 )
 
 const (

@@ -12,7 +12,7 @@ import (
 	"unicode"
 	"unicode/utf16"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type Column struct{}

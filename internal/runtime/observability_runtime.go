@@ -6,8 +6,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 const redactedValue = network.RedactedValue

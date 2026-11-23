@@ -12,9 +12,9 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 const (

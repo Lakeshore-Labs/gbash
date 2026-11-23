@@ -9,8 +9,8 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
 	"github.com/klauspost/compress/zstd"
 )
 

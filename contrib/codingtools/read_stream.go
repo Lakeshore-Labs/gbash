@@ -9,7 +9,7 @@ import (
 	"fmt"
 	"io"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 const contentTypeSniffBytes = 512

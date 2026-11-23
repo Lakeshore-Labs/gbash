@@ -10,10 +10,10 @@ import (
 	"os"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 // FetchFunc performs a network request through the runtime-owned network

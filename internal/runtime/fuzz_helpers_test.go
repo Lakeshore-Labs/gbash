@@ -11,8 +11,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/internal/shell"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/internal/shell"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const (

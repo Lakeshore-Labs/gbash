@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 func newTestServerState(t *testing.T, ttl time.Duration) *serverState {

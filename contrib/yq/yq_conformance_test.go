@@ -7,9 +7,9 @@ import (
 	"runtime"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/conformance"
-	internalruntime "github.com/ewhauser/gbash/internal/runtime"
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/conformance"
+	internalruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 )
 
 func TestYQConformance(t *testing.T) {

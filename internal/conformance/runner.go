@@ -21,14 +21,14 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/builtins"
-	gbruntime "github.com/ewhauser/gbash/internal/runtime"
-	"github.com/ewhauser/gbash/internal/testutil"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	gbruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 var bashLinePrefixPattern = regexp.MustCompile(`(?m)^(?:[^:\n]+/)?\w+:(?:[^:\n]+:)* line \d+: `)

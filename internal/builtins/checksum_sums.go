@@ -16,7 +16,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 	"golang.org/x/crypto/blake2b"
 )
 

@@ -3,7 +3,7 @@ package builtins
 import (
 	"context"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
 )
 
 type Compadjust struct{}

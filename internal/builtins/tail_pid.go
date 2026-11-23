@@ -3,7 +3,7 @@ package builtins
 import (
 	"errors"
 
-	pubhost "github.com/ewhauser/gbash/host"
+	pubhost "github.com/Lakeshore-Labs/gbash/host"
 )
 
 var errTailPIDUnsupported = errors.New("tail pid liveness unsupported")

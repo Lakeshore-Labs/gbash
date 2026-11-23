@@ -5,8 +5,8 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
 )
 
 const (

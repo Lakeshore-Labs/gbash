@@ -7,10 +7,10 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	shellpattern "github.com/ewhauser/gbash/internal/shellpattern"
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	shellpattern "github.com/Lakeshore-Labs/gbash/internal/shellpattern"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 type staticCompletionBackend struct {

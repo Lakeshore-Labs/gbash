@@ -1,10 +1,10 @@
 package runtime
 
 import (
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
 )
 
 // Option configures a runtime before initialization.

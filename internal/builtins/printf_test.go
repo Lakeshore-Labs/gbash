@@ -6,7 +6,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
 )
 
 type errWriter struct {

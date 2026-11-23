@@ -17,8 +17,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/examples/internal/sqlitefs"
-	gbfs "github.com/ewhauser/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/examples/internal/sqlitefs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 const (

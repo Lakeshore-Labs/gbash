@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 // sqliteDefaultBufferedResultBytes bounds the rows that the width-aligned

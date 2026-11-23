@@ -13,7 +13,7 @@ import (
 	"strings"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 	"golang.org/x/term"
 )
 

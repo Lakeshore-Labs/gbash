@@ -6,8 +6,8 @@ import (
 	"strings"
 	"sync"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/trace"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type sandboxLayoutState struct {

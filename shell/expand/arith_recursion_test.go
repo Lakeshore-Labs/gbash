@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // These cases used to recurse until the Go runtime killed the process with

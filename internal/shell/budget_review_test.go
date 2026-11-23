@@ -7,10 +7,10 @@ import (
 	"testing"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	"github.com/ewhauser/gbash/policy"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func runBudgetScript(t *testing.T, fsys gbfs.FileSystem, limits *policy.Limits, script string) (stdout, stderr string, code int) {

@@ -9,7 +9,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
 	"github.com/google/jsonschema-go/jsonschema"
 	"google.golang.org/adk/agent"
 	"google.golang.org/adk/agent/llmagent"

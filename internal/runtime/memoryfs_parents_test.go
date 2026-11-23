@@ -7,8 +7,8 @@ import (
 	stdfs "io/fs"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
 )
 
 func TestRedirectIntoMissingDirectoryFailsWithoutCreatingParents(t *testing.T) {

@@ -8,7 +8,7 @@ import (
 	"syscall"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestCatSupportsLongAndShortNumberFlags(t *testing.T) {

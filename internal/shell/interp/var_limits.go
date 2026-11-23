@@ -5,7 +5,7 @@ import (
 	"errors"
 	"io"
 
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 // errVariableSizeLimit stops builtins such as read and mapfile from

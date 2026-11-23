@@ -16,8 +16,8 @@ import (
 	"strings"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/network"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/network"
 )
 
 type Curl struct{}

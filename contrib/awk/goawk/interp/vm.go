@@ -10,9 +10,9 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/compiler"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/resolver"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/lexer"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/compiler"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/resolver"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/lexer"
 )
 
 // Execute a block of virtual machine instructions.

@@ -3,8 +3,8 @@ package interp
 import (
 	"testing"
 
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 func TestCompoundArrayAssignments(t *testing.T) {

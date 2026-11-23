@@ -12,7 +12,7 @@ import (
 	"path"
 	"strings"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type normalizedConfig struct {

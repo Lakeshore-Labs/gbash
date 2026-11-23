@@ -6,7 +6,7 @@ import (
 	stdfs "io/fs"
 	"path"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 // maxSymlinkHops bounds symlink resolution while checking paths that may not

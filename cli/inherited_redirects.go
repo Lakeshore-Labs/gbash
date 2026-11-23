@@ -7,8 +7,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 )
 
 func wrapInheritedStdin(reader io.Reader, opts *runtimeOptions) io.Reader {

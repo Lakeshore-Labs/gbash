@@ -3,7 +3,7 @@ package builtins
 import (
 	"testing"
 
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func TestDashInvocationUsesPOSIXShellVariant(t *testing.T) {

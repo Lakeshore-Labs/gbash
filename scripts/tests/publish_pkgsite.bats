@@ -17,15 +17,15 @@ setup() {
 
 	# Root go.mod.
 	cat > "${SANDBOX}/go.mod" <<-'EOF'
-	module github.com/ewhauser/gbash
+	module github.com/Lakeshore-Labs/gbash
 	EOF
 
 	# Contrib go.mod files.
 	cat > "${SANDBOX}/contrib/awk/go.mod" <<-'EOF'
-	module github.com/ewhauser/gbash/contrib/awk
+	module github.com/Lakeshore-Labs/gbash/contrib/awk
 	EOF
 	cat > "${SANDBOX}/contrib/jq/go.mod" <<-'EOF'
-	module github.com/ewhauser/gbash/contrib/jq
+	module github.com/Lakeshore-Labs/gbash/contrib/jq
 	EOF
 
 	# Default: go list succeeds.

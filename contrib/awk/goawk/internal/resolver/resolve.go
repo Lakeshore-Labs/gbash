@@ -9,8 +9,8 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/ast"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/lexer"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/ast"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/lexer"
 )
 
 // ResolvedProgram is a parsed AWK program plus variable scope and type data

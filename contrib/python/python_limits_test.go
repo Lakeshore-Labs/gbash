@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 // runPythonLimitScript runs script under a request timeout and fails the test

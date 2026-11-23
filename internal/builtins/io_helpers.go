@@ -6,8 +6,8 @@ import (
 	"io"
 	stdfs "io/fs"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func readAllFile(ctx context.Context, inv *Invocation, name string) (data []byte, abs string, err error) {

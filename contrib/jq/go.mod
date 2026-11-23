@@ -1,9 +1,9 @@
-module github.com/ewhauser/gbash/contrib/jq
+module github.com/Lakeshore-Labs/gbash/contrib/jq
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
 	github.com/itchyny/timefmt-go v0.1.7
 	golang.org/x/term v0.45.0
 )
@@ -14,4 +14,4 @@ require (
 	golang.org/x/text v0.41.0 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..

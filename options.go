@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
 )
 
 // WithConfig overlays non-zero fields from cfg onto the runtime configuration.

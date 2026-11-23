@@ -26,10 +26,10 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/ast"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/compiler"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/resolver"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/parser"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/ast"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/compiler"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/resolver"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/parser"
 )
 
 var (

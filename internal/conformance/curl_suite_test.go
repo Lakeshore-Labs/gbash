@@ -7,9 +7,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash/internal/runtime"
-	"github.com/ewhauser/gbash/internal/testutil"
-	"github.com/ewhauser/gbash/network"
+	gbruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/network"
 )
 
 func newCurlSuiteConfig(t *testing.T) SuiteConfig {

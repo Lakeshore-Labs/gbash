@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ewhauser/gbash/cli"
+	"github.com/Lakeshore-Labs/gbash/cli"
 )
 
 func main() {

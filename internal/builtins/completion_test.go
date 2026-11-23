@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	gbash "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/internal/shellstate"
+	gbash "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 func TestCompoptPersistsAcrossCommandsInScript(t *testing.T) {

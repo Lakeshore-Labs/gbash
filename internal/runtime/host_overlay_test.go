@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const hostOverlayVirtualRoot = "/home/agent/project"

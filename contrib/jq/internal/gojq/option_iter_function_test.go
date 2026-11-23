@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 // Implementation of range/2 using WithIterFunction option.

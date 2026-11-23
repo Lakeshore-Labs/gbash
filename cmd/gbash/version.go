@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/ewhauser/gbash/cli"
+	"github.com/Lakeshore-Labs/gbash/cli"
 )
 
 var (

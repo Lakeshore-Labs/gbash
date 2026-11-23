@@ -1,6 +1,6 @@
 package builtins
 
-import pubcmd "github.com/ewhauser/gbash/commands"
+import pubcmd "github.com/Lakeshore-Labs/gbash/commands"
 
 type Command = pubcmd.Command
 type CommandFunc = pubcmd.CommandFunc

@@ -12,9 +12,9 @@ import (
 	"testing"
 	"time"
 
-	gbash "github.com/ewhauser/gbash"
-	rootcli "github.com/ewhauser/gbash/cli"
-	"github.com/ewhauser/gbash/contrib/extras"
+	gbash "github.com/Lakeshore-Labs/gbash"
+	rootcli "github.com/Lakeshore-Labs/gbash/cli"
+	"github.com/Lakeshore-Labs/gbash/contrib/extras"
 )
 
 func runCLI(ctx context.Context, args []string, stdin io.Reader, stdout, stderr io.Writer) (int, error) {

@@ -13,7 +13,7 @@ import (
 	"strings"
 	"unicode"
 
-	shellpattern "github.com/ewhauser/gbash/internal/shellpattern"
+	shellpattern "github.com/Lakeshore-Labs/gbash/internal/shellpattern"
 )
 
 type Grep struct{}

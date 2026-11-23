@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/contrib/bashtool"
-	"github.com/ewhauser/gbash/contrib/extras"
-	gbfs "github.com/ewhauser/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash/contrib/extras"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func runAgentLoop(ctx context.Context, provider Provider, task EvalTask, maxTurns int) (agentTrace, gbfs.FileSystem, error) {

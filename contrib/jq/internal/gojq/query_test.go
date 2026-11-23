@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 func ExampleQuery_Run() {

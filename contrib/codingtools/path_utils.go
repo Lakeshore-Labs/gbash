@@ -4,7 +4,7 @@ import (
 	"context"
 	"strings"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 	"golang.org/x/text/unicode/norm"
 )
 

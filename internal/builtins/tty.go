@@ -8,7 +8,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 )
 
 type Tty struct{}

@@ -8,8 +8,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 func TestDefaultToolDefinitionAndSchemas(t *testing.T) {

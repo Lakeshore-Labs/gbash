@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 func TestReadWriteRootRenamedAndReplacedBySymlinkIsNotMounted(t *testing.T) {

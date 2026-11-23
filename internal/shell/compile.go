@@ -3,9 +3,9 @@ package shell
 import (
 	"errors"
 
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func compileChunk(program *syntax.File, pol policy.Policy, budget *executionBudget, loopNamespace string, variant shellvariant.ShellVariant) (map[*syntax.Stmt]*syntax.Stmt, error) {

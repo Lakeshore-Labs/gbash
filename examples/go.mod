@@ -1,11 +1,11 @@
-module github.com/ewhauser/gbash/examples
+module github.com/Lakeshore-Labs/gbash/examples
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
-	github.com/ewhauser/gbash/contrib/bashtool v0.0.41
-	github.com/ewhauser/gbash/contrib/extras v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/bashtool v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/extras v0.0.42
 	github.com/google/jsonschema-go v0.4.2
 	github.com/klauspost/compress v1.18.4
 	github.com/ncruces/go-sqlite3 v0.31.1
@@ -29,6 +29,12 @@ require (
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	github.com/JohannesKaufmann/dom v0.2.0 // indirect
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.0 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/python v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.42 // indirect
 	github.com/a8m/envsubst v1.4.3 // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/alecthomas/participle/v2 v2.1.4 // indirect
@@ -38,12 +44,6 @@ require (
 	github.com/dustin/go-humanize v1.0.1 // indirect
 	github.com/ebitengine/purego v0.10.0 // indirect
 	github.com/elliotchance/orderedmap v1.8.0 // indirect
-	github.com/ewhauser/gbash/contrib/awk v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/jq v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/python v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/yq v0.0.41 // indirect
 	github.com/ewhauser/gomonty v0.0.13 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
@@ -107,20 +107,20 @@ require (
 	rsc.io/ordered v1.1.1 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../
+replace github.com/Lakeshore-Labs/gbash => ../
 
-replace github.com/ewhauser/gbash/contrib/bashtool => ../contrib/bashtool
+replace github.com/Lakeshore-Labs/gbash/contrib/bashtool => ../contrib/bashtool
 
-replace github.com/ewhauser/gbash/contrib/extras => ../contrib/extras
+replace github.com/Lakeshore-Labs/gbash/contrib/extras => ../contrib/extras
 
-replace github.com/ewhauser/gbash/contrib/sqlite3 => ../contrib/sqlite3
+replace github.com/Lakeshore-Labs/gbash/contrib/sqlite3 => ../contrib/sqlite3
 
-replace github.com/ewhauser/gbash/contrib/awk => ../contrib/awk
+replace github.com/Lakeshore-Labs/gbash/contrib/awk => ../contrib/awk
 
-replace github.com/ewhauser/gbash/contrib/htmltomarkdown => ../contrib/htmltomarkdown
+replace github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown => ../contrib/htmltomarkdown
 
-replace github.com/ewhauser/gbash/contrib/jq => ../contrib/jq
+replace github.com/Lakeshore-Labs/gbash/contrib/jq => ../contrib/jq
 
-replace github.com/ewhauser/gbash/contrib/yq => ../contrib/yq
+replace github.com/Lakeshore-Labs/gbash/contrib/yq => ../contrib/yq
 
-replace github.com/ewhauser/gbash/contrib/python => ../contrib/python
+replace github.com/Lakeshore-Labs/gbash/contrib/python => ../contrib/python

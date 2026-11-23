@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func runSpecialVarScript(t *testing.T, cfg *RunnerConfig, src string) (string, string, error) {

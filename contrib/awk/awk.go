@@ -13,10 +13,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/interp"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/parser"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/interp"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/parser"
 
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 type AWK struct {

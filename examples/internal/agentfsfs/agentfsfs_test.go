@@ -13,8 +13,8 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 var agentFSTestMu sync.Mutex

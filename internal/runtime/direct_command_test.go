@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestDirectCommandRequestRespectsPATHAndWorkDir(t *testing.T) {

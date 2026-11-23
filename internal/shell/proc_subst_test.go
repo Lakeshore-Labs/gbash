@@ -9,9 +9,9 @@ import (
 	"strings"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/syntax"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func newTestProcSubstManager(pol policy.Policy) *procSubstManager {

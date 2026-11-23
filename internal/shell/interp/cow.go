@@ -3,7 +3,7 @@ package interp
 import (
 	"maps"
 
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 func shareMapForSubshell[K comparable, V any](m map[K]V, parentShared *bool) bool {

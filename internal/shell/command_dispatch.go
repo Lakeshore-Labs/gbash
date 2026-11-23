@@ -7,11 +7,11 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type commandExecuteRequest struct {

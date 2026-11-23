@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func TestCompletionBackendRunCommandHookMatchesDirectFunctionOrder(t *testing.T) {

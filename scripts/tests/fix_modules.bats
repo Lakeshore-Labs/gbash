@@ -24,98 +24,98 @@ setup() {
 	cp "${SCRIPTS_DIR}/fix_modules.sh" "${SANDBOX}/scripts/fix_modules.sh"
 	chmod +x "${SANDBOX}/scripts/fix_modules.sh"
 
-	write_go_mod "${SANDBOX}/go.mod" "module github.com/ewhauser/gbash
+	write_go_mod "${SANDBOX}/go.mod" "module github.com/Lakeshore-Labs/gbash
 
 go 1.26.0"
 
-	write_go_mod "${SANDBOX}/contrib/awk/go.mod" "module github.com/ewhauser/gbash/contrib/awk
+	write_go_mod "${SANDBOX}/contrib/awk/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/awk
 
 go 1.26.0
 
-require github.com/ewhauser/gbash v0.0.26"
+require github.com/Lakeshore-Labs/gbash v0.0.26"
 
-	write_go_mod "${SANDBOX}/contrib/bashtool/go.mod" "module github.com/ewhauser/gbash/contrib/bashtool
+	write_go_mod "${SANDBOX}/contrib/bashtool/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/bashtool
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.25
-	github.com/ewhauser/gbash/contrib/extras v0.0.25
+	github.com/Lakeshore-Labs/gbash v0.0.25
+	github.com/Lakeshore-Labs/gbash/contrib/extras v0.0.25
 )
 
 require (
-	github.com/ewhauser/gbash/contrib/awk v0.0.25 // indirect
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.25 // indirect
-	github.com/ewhauser/gbash/contrib/jq v0.0.25 // indirect
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.25 // indirect
-	github.com/ewhauser/gbash/contrib/yq v0.0.25 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.25 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.25 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.25 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.25 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.25 // indirect
 )"
 
-	write_go_mod "${SANDBOX}/contrib/codingtools/go.mod" "module github.com/ewhauser/gbash/contrib/codingtools
+	write_go_mod "${SANDBOX}/contrib/codingtools/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/codingtools
 
 go 1.26.0
 
-require github.com/ewhauser/gbash v0.0.25"
+require github.com/Lakeshore-Labs/gbash v0.0.25"
 
-	write_go_mod "${SANDBOX}/contrib/extras/go.mod" "module github.com/ewhauser/gbash/contrib/extras
+	write_go_mod "${SANDBOX}/contrib/extras/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/extras
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.26
-	github.com/ewhauser/gbash/contrib/awk v0.0.26
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.26
-	github.com/ewhauser/gbash/contrib/jq v0.0.26
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.26
-	github.com/ewhauser/gbash/contrib/yq v0.0.26
+	github.com/Lakeshore-Labs/gbash v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.26
 )"
 
-	write_go_mod "${SANDBOX}/contrib/htmltomarkdown/go.mod" "module github.com/ewhauser/gbash/contrib/htmltomarkdown
+	write_go_mod "${SANDBOX}/contrib/htmltomarkdown/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown
 
 go 1.26.0
 
-require github.com/ewhauser/gbash v0.0.26"
+require github.com/Lakeshore-Labs/gbash v0.0.26"
 
-	write_go_mod "${SANDBOX}/contrib/jq/go.mod" "module github.com/ewhauser/gbash/contrib/jq
-
-go 1.26.0
-
-require github.com/ewhauser/gbash v0.0.26"
-
-	write_go_mod "${SANDBOX}/contrib/nodejs/go.mod" "module github.com/ewhauser/gbash/contrib/nodejs
+	write_go_mod "${SANDBOX}/contrib/jq/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/jq
 
 go 1.26.0
 
-require github.com/ewhauser/gbash v0.0.0"
+require github.com/Lakeshore-Labs/gbash v0.0.26"
 
-	write_go_mod "${SANDBOX}/contrib/sqlite3/go.mod" "module github.com/ewhauser/gbash/contrib/sqlite3
-
-go 1.26.0
-
-require github.com/ewhauser/gbash v0.0.26"
-
-	write_go_mod "${SANDBOX}/contrib/yq/go.mod" "module github.com/ewhauser/gbash/contrib/yq
+	write_go_mod "${SANDBOX}/contrib/nodejs/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/nodejs
 
 go 1.26.0
 
-require github.com/ewhauser/gbash v0.0.26"
+require github.com/Lakeshore-Labs/gbash v0.0.0"
 
-	write_go_mod "${SANDBOX}/examples/go.mod" "module github.com/ewhauser/gbash/examples
+	write_go_mod "${SANDBOX}/contrib/sqlite3/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/sqlite3
+
+go 1.26.0
+
+require github.com/Lakeshore-Labs/gbash v0.0.26"
+
+	write_go_mod "${SANDBOX}/contrib/yq/go.mod" "module github.com/Lakeshore-Labs/gbash/contrib/yq
+
+go 1.26.0
+
+require github.com/Lakeshore-Labs/gbash v0.0.26"
+
+	write_go_mod "${SANDBOX}/examples/go.mod" "module github.com/Lakeshore-Labs/gbash/examples
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.26
-	github.com/ewhauser/gbash/contrib/bashtool v0.0.26
-	github.com/ewhauser/gbash/contrib/extras v0.0.26
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.26
+	github.com/Lakeshore-Labs/gbash v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/bashtool v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/extras v0.0.26
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.26
 )
 
 require (
-	github.com/ewhauser/gbash/contrib/awk v0.0.26 // indirect
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.26 // indirect
-	github.com/ewhauser/gbash/contrib/jq v0.0.26 // indirect
-	github.com/ewhauser/gbash/contrib/yq v0.0.26 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.26 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.26 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.26 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.26 // indirect
 )"
 
 	cat > "${STUB_BIN}/go" <<-'STUB'
@@ -150,8 +150,8 @@ teardown() {
 	run_gbash "scripts/fix_modules.sh"
 	[ "$status" -eq 0 ]
 	! [[ "$(<"${SANDBOX}/state/go_calls")" == *"-require="* ]]
-	[[ "$(<"${SANDBOX}/state/go_calls")" == *"/examples :: go mod edit -replace=github.com/ewhauser/gbash/contrib/awk=../contrib/awk"* ]]
-	[[ "$(<"${SANDBOX}/state/go_calls")" == *"/contrib/bashtool :: go mod edit -replace=github.com/ewhauser/gbash/contrib/yq=../yq"* ]]
+	[[ "$(<"${SANDBOX}/state/go_calls")" == *"/examples :: go mod edit -replace=github.com/Lakeshore-Labs/gbash/contrib/awk=../contrib/awk"* ]]
+	[[ "$(<"${SANDBOX}/state/go_calls")" == *"/contrib/bashtool :: go mod edit -replace=github.com/Lakeshore-Labs/gbash/contrib/yq=../yq"* ]]
 }
 
 @test "fix_modules: versioned run updates newly discovered modules and indirect internal deps" {
@@ -159,11 +159,11 @@ teardown() {
 	[ "$status" -eq 0 ]
 	local calls
 	calls="$(<"${SANDBOX}/state/go_calls")"
-	[[ "$calls" == *"/contrib/nodejs :: go mod edit -require=github.com/ewhauser/gbash@v2.0.0"* ]]
-	[[ "$calls" == *"/contrib/bashtool :: go mod edit -require=github.com/ewhauser/gbash/contrib/extras@v2.0.0"* ]]
-	[[ "$calls" == *"/contrib/bashtool :: go mod edit -require=github.com/ewhauser/gbash/contrib/awk@v2.0.0"* ]]
-	[[ "$calls" == *"/examples :: go mod edit -require=github.com/ewhauser/gbash/contrib/bashtool@v2.0.0"* ]]
-	[[ "$calls" == *"/examples :: go mod edit -require=github.com/ewhauser/gbash/contrib/awk@v2.0.0"* ]]
+	[[ "$calls" == *"/contrib/nodejs :: go mod edit -require=github.com/Lakeshore-Labs/gbash@v2.0.0"* ]]
+	[[ "$calls" == *"/contrib/bashtool :: go mod edit -require=github.com/Lakeshore-Labs/gbash/contrib/extras@v2.0.0"* ]]
+	[[ "$calls" == *"/contrib/bashtool :: go mod edit -require=github.com/Lakeshore-Labs/gbash/contrib/awk@v2.0.0"* ]]
+	[[ "$calls" == *"/examples :: go mod edit -require=github.com/Lakeshore-Labs/gbash/contrib/bashtool@v2.0.0"* ]]
+	[[ "$calls" == *"/examples :: go mod edit -require=github.com/Lakeshore-Labs/gbash/contrib/awk@v2.0.0"* ]]
 }
 
 @test "fix_modules: versioned run adds local replaces for transitive internal deps" {
@@ -171,9 +171,9 @@ teardown() {
 	[ "$status" -eq 0 ]
 	local calls
 	calls="$(<"${SANDBOX}/state/go_calls")"
-	[[ "$calls" == *"/examples :: go mod edit -replace=github.com/ewhauser/gbash/contrib/jq=../contrib/jq"* ]]
-	[[ "$calls" == *"/examples :: go mod edit -replace=github.com/ewhauser/gbash/contrib/yq=../contrib/yq"* ]]
-	[[ "$calls" == *"/contrib/bashtool :: go mod edit -replace=github.com/ewhauser/gbash/contrib/htmltomarkdown=../htmltomarkdown"* ]]
+	[[ "$calls" == *"/examples :: go mod edit -replace=github.com/Lakeshore-Labs/gbash/contrib/jq=../contrib/jq"* ]]
+	[[ "$calls" == *"/examples :: go mod edit -replace=github.com/Lakeshore-Labs/gbash/contrib/yq=../contrib/yq"* ]]
+	[[ "$calls" == *"/contrib/bashtool :: go mod edit -replace=github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown=../htmltomarkdown"* ]]
 }
 
 @test "fix_modules: calls go mod tidy for each discovered module and go list at the end" {

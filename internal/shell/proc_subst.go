@@ -14,10 +14,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/syntax"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 const procSubstProbeName = ".gbash-procsub-probe"

@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	goruntime "runtime"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/contrib/extras"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/contrib/extras"
 	"golang.org/x/term"
 )
 

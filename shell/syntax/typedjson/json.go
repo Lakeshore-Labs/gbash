@@ -22,7 +22,7 @@ import (
 	"io"
 	"reflect"
 
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // Encode is a shortcut for [EncodeOptions.Encode] with the default options.

@@ -7,8 +7,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func TestSeededInMemoryFileSystemHelper(t *testing.T) {

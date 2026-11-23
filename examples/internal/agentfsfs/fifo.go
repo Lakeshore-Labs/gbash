@@ -7,7 +7,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type memoryFIFO struct {

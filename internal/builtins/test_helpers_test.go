@@ -10,8 +10,8 @@ import (
 	"slices"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type Config = gbruntime.Config

@@ -15,10 +15,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/shellvariantprofile"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/shellvariantprofile"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 const loopIterHelperCommand = "__jb_loop_iter"

@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type Install struct{}

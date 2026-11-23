@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/printfutil"
+	"github.com/Lakeshore-Labs/gbash/internal/printfutil"
 )
 
 type Echo struct{}

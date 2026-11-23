@@ -14,8 +14,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/resolver"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/lexer"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/resolver"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/lexer"
 )
 
 // Call native-defined function with given name and arguments, return

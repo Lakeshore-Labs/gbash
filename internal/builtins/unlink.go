@@ -9,7 +9,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type Unlink struct{}

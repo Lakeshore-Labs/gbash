@@ -8,8 +8,8 @@ import (
 	"io"
 	"os"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/examples/internal/sqlitefs"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/examples/internal/sqlitefs"
 )
 
 const defaultWorkDir = "/home/agent"

@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 //nolint:paralleltest // sends SIGTERM to the test process

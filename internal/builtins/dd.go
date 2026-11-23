@@ -14,7 +14,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 )
 
 type Dd struct{}

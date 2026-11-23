@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 func processGroupRuntime(t *testing.T, opts ...gbash.Option) *gbash.Runtime {

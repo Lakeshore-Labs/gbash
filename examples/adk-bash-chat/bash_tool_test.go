@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
 )
 
 func TestSeedLabCreatesFixturesAndExtrasRegistryTools(t *testing.T) {

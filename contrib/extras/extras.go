@@ -4,14 +4,14 @@ package extras
 import (
 	"fmt"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	contribawk "github.com/ewhauser/gbash/contrib/awk"
-	contribhtmltomarkdown "github.com/ewhauser/gbash/contrib/htmltomarkdown"
-	contribjq "github.com/ewhauser/gbash/contrib/jq"
-	contribpython "github.com/ewhauser/gbash/contrib/python"
-	contribsqlite3 "github.com/ewhauser/gbash/contrib/sqlite3"
-	contribyq "github.com/ewhauser/gbash/contrib/yq"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	contribawk "github.com/Lakeshore-Labs/gbash/contrib/awk"
+	contribhtmltomarkdown "github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown"
+	contribjq "github.com/Lakeshore-Labs/gbash/contrib/jq"
+	contribpython "github.com/Lakeshore-Labs/gbash/contrib/python"
+	contribsqlite3 "github.com/Lakeshore-Labs/gbash/contrib/sqlite3"
+	contribyq "github.com/Lakeshore-Labs/gbash/contrib/yq"
 )
 
 // FullRegistry returns the default registry plus the stable contrib commands.
