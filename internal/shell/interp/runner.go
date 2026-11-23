@@ -1237,9 +1237,6 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 			r.cmd(ctx, st.Cmd)
 		}
 	}
-	if !r.pipeStatusSet && stmtShouldMaterializePipeStatus(st, hadPipeStatus) {
-		r.setPipeStatuses(r.exit.code)
-	}
 	keepRedirs := r.keepRedirs
 	r.keepRedirs = false
 	if keepRedirs {
@@ -1247,11 +1244,22 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 			r.markNamedFDReleased(name)
 		}
 	}
+	// A file that fails only when it is closed, such as one uploaded on close, fails the command that wrote it.
+	// The error is printed once the shell's own stderr is back, since the redirected one may be that file.
+	var closeErr error
 	if !keepRedirs {
 		for i := len(closers) - 1; i >= 0; i-- {
-			_ = closers[i].Close()
+			if err := closers[i].Close(); err != nil && closeErr == nil {
+				closeErr = err
+				if r.exit.ok() {
+					r.exit.code = 1
+				}
+			}
 		}
 		r.waitProcSubsts(procSubstStart)
+	}
+	if !r.pipeStatusSet && stmtShouldMaterializePipeStatus(st, hadPipeStatus) {
+		r.setPipeStatuses(r.exit.code)
 	}
 	// After exec keeps a >(cmd) redirection open, cmd reads until the shell
 	// exits, so it is joined by [Runner.StopJobs] rather than here.
@@ -1280,6 +1288,9 @@ func (r *Runner) stmtSync(ctx context.Context, st *syntax.Stmt, hadPipeStatus bo
 		}
 		r.popFDSnapshot()
 		r.syncStandardFDs()
+		if closeErr != nil {
+			r.errf("%v\n", closeErr)
+		}
 	} else {
 		r.popFDSnapshot()
 		r.closeUnusedSnapshotFDs(oldFDs)

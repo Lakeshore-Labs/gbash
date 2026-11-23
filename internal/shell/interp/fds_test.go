@@ -3,10 +3,12 @@ package interp
 import (
 	"bytes"
 	"context"
+	"errors"
 	"fmt"
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 )
 
@@ -536,5 +538,54 @@ exec {fd}>&-
 	}
 	if stderr != "" {
 		t.Fatalf("stderr = %q, want empty", stderr)
+	}
+}
+
+type failingCloseFile struct{ *os.File }
+
+func failingCloseConfig(dir string) *RunnerConfig {
+	return &RunnerConfig{
+		Dir: dir,
+		OpenHandler: func(_ context.Context, name string, flag int, perm os.FileMode) (io.ReadWriteCloser, error) {
+			f, err := os.OpenFile(name, flag, perm)
+			if err != nil || flag&(os.O_WRONLY|os.O_RDWR) == 0 {
+				return f, err
+			}
+			return failingCloseFile{f}, nil
+		},
+	}
+}
+
+func (f failingCloseFile) Close() error {
+	_ = f.File.Close()
+	return &os.PathError{Op: "close", Path: f.Name(), Err: errors.New("upload failed")}
+}
+
+// A file that reports an error only when it is closed, such as one uploaded on close, must not let the command
+// that wrote it succeed.
+func TestRedirectReportsAFailedClose(t *testing.T) {
+	t.Parallel()
+
+	dir := t.TempDir()
+	stdout, stderr, err := runInterpScriptConfig(t, failingCloseConfig(dir), fmt.Sprintf(`set -e; echo Sunday > %q; echo announced`, filepath.Join(dir, "notice.txt")))
+	requireInterpExitStatus(t, err, 1)
+	if stdout != "" {
+		t.Errorf("stdout = %q, want the script stopped before announcing", stdout)
+	}
+	if !strings.Contains(stderr, "notice.txt: upload failed") {
+		t.Errorf("stderr = %q, want the close error", stderr)
+	}
+}
+
+func TestRedirectFailedCloseIsInPipeStatus(t *testing.T) {
+	t.Parallel()
+
+	dir := t.TempDir()
+	stdout, _, err := runInterpScriptConfig(t, failingCloseConfig(dir), fmt.Sprintf(`echo a > %q; echo "$? ${PIPESTATUS[*]}"`, filepath.Join(dir, "f")))
+	if err != nil {
+		t.Fatalf("Run error = %v", err)
+	}
+	if stdout != "1 1\n" {
+		t.Errorf("stdout = %q, want $? and PIPESTATUS both 1", stdout)
 	}
 }
