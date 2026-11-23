@@ -270,7 +270,7 @@ linters:
           pkg: '^golang\.org/x/sys/unix$'
           msg: Do not read or mutate host process or kernel state directly from commands.
         - pattern: '^commands\.CommandFS\.raw$'
-          pkg: '^github\.com/ewhauser/gbash/commands$'
+          pkg: '^github\.com/Lakeshore-Labs/gbash/commands$'
           msg: Do not bypass CommandFS policy checks; use inv.FS methods instead.
         - pattern: '^io\.ReadAll$'
           pkg: '^io$'
