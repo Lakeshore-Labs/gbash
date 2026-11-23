@@ -6,8 +6,8 @@ import (
 	"path"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 func newNodeRegistry(tb testing.TB) *commands.Registry {

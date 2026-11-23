@@ -12,10 +12,10 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/completionutil"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // LookupHandlerContext returns the [HandlerContext] value stored in ctx,

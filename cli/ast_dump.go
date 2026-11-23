@@ -9,14 +9,14 @@ import (
 	"math"
 	"strings"
 
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/internal/commandutil"
-	"github.com/ewhauser/gbash/internal/shell/fileutil"
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shell/syntax/typedjson"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/fileutil"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax/typedjson"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 type astDumpSource struct {

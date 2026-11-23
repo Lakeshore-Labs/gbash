@@ -10,12 +10,12 @@ import (
 	"slices"
 	"strings"
 
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 	"github.com/dop251/goja"
 	gojabuffer "github.com/dop251/goja_nodejs/buffer"
 	gojaconsole "github.com/dop251/goja_nodejs/console"
 	gojarequire "github.com/dop251/goja_nodejs/require"
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
 )
 
 type NodeJS struct{}

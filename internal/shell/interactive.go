@@ -8,9 +8,9 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	"github.com/ewhauser/gbash/internal/shellstate"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"io"
 	"math"
 
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 // maxInputLimit returns inv's MaxFileBytes, or zero when it is unset or

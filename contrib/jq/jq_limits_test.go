@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 func runJQLimitScript(t *testing.T, script string) *gbruntime.ExecutionResult {

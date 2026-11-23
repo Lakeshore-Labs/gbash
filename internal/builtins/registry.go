@@ -1,6 +1,6 @@
 package builtins
 
-import "github.com/ewhauser/gbash/commands"
+import "github.com/Lakeshore-Labs/gbash/commands"
 
 func DefaultRegistry() *commands.Registry {
 	cmds := []commands.Command{

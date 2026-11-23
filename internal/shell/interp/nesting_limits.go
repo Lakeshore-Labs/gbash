@@ -3,7 +3,7 @@ package interp
 import (
 	"fmt"
 
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // SubshellDepthLimitError reports a command substitution, subshell or process

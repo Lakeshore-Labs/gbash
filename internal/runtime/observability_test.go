@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 func TestTraceOffDoesNotAllocateRecorder(t *testing.T) {

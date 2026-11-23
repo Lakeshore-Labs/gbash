@@ -1,4 +1,4 @@
-module github.com/ewhauser/gbash
+module github.com/Lakeshore-Labs/gbash
 
 go 1.26.0
 

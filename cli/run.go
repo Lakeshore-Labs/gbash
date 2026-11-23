@@ -13,12 +13,12 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/internal/commandutil"
-	gbserver "github.com/ewhauser/gbash/server"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
+	gbserver "github.com/Lakeshore-Labs/gbash/server"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 	"golang.org/x/term"
 )
 

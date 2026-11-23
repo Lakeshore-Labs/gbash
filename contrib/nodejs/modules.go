@@ -12,9 +12,9 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/Lakeshore-Labs/gbash/commands"
 	"github.com/dop251/goja"
 	gojabuffer "github.com/dop251/goja_nodejs/buffer"
-	"github.com/ewhauser/gbash/commands"
 )
 
 func (rt *nodeRuntime) processModule() (*goja.Object, error) {

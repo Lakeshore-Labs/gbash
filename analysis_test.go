@@ -9,9 +9,9 @@ import (
 	"sync"
 	"testing"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 type analysisRecord struct {

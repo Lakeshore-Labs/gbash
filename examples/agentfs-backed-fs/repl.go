@@ -8,8 +8,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/shell"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/shell"
 	"golang.org/x/term"
 )
 

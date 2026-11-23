@@ -3,7 +3,7 @@ package gbasheval
 import (
 	"sync"
 
-	"github.com/ewhauser/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
 )
 
 var evalBashToolOnce = sync.OnceValue(func() *bashtool.Tool {

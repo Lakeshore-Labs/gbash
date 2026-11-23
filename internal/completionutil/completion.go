@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/shellstate"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 var validCompletionOptions = []string{

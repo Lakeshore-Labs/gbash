@@ -17,7 +17,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 const (

@@ -7,9 +7,9 @@ import (
 	"slices"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/network"
 )
 
 type stubNetworkClient struct{}

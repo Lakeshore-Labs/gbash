@@ -15,8 +15,8 @@ import (
 	"syscall/js"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type browserShell struct {

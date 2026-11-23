@@ -4,7 +4,7 @@ import (
 	"io"
 	"time"
 
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 // ExecutionRequest describes a non-interactive nested shell or command

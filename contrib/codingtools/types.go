@@ -1,6 +1,6 @@
 package codingtools
 
-import gbfs "github.com/ewhauser/gbash/fs"
+import gbfs "github.com/Lakeshore-Labs/gbash/fs"
 
 const defaultHomeDir = "/home/agent"
 

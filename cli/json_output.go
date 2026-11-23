@@ -9,8 +9,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type jsonExecutionResult struct {

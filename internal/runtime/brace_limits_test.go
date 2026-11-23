@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const braceLimitMessage = "brace expansion: too many words (limit "

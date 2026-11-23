@@ -10,8 +10,8 @@ import (
 	"strings"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/testutil"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 )
 
 type diffOracleResult struct {

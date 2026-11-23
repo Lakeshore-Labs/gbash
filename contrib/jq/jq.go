@@ -11,8 +11,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 type JQ struct{}

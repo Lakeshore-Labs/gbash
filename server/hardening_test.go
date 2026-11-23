@@ -15,9 +15,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	gbserver "github.com/ewhauser/gbash/server"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbserver "github.com/Lakeshore-Labs/gbash/server"
 )
 
 func TestServerClientDisconnectCancelsRunningExec(t *testing.T) {

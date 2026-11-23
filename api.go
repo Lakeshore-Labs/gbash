@@ -7,14 +7,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/builtins"
-	internalruntime "github.com/ewhauser/gbash/internal/runtime"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	internalruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
 )
 
 // Runtime executes bash-like scripts inside the configured sandbox.

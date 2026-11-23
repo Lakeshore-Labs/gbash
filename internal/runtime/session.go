@@ -12,14 +12,14 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/internal/shell"
-	"github.com/ewhauser/gbash/internal/shellstate"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/internal/shell"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 func (s *Session) Exec(ctx context.Context, req *ExecutionRequest) (*ExecutionResult, error) {

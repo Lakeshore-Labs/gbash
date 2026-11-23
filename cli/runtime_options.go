@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type runtimeOptions struct {

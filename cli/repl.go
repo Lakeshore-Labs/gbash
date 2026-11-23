@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
 )
 
 func runInteractiveShell(ctx context.Context, rt *gbash.Runtime, parsed *builtins.BashInvocation, stdin io.Reader, stdout, stderr io.Writer) (int, error) {

@@ -14,11 +14,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/contrib/bashtool"
-	"github.com/ewhauser/gbash/contrib/extras"
-	gbfs "github.com/ewhauser/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash/contrib/extras"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 	"google.golang.org/adk/tool"
 )
 

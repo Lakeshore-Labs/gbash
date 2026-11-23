@@ -10,8 +10,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // tracer prints expressions like a shell would do if its

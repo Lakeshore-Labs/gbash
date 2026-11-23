@@ -1,4 +1,4 @@
-module github.com/ewhauser/gbash/tools/regexponce-gclplugin
+module github.com/Lakeshore-Labs/gbash/tools/regexponce-gclplugin
 
 go 1.26.0
 

@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type endlessClosableReader struct {

@@ -10,7 +10,7 @@ import (
 // only lower it.
 const sqliteHardHeapLimitBytes = 128 << 20
 
-const sqliteSandboxVFSName = "github.com/ewhauser/gbash/contrib/sqlite3.sandboxVFS"
+const sqliteSandboxVFSName = "github.com/Lakeshore-Labs/gbash/contrib/sqlite3.sandboxVFS"
 
 // sqliteSandboxDSN opens the in-memory main database on the sandbox VFS, so
 // that SQLite uses it for any temp or spill file the connection asks for.

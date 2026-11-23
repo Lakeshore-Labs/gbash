@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestExecutionResultReportsSpillTruncation(t *testing.T) {

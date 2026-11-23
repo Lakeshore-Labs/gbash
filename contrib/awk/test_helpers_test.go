@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/policy"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func newAWKRegistry(tb testing.TB) *commands.Registry {

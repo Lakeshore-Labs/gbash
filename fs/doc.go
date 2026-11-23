@@ -4,6 +4,6 @@
 //
 // This is a supported public extension package for callers that need to supply
 // custom filesystem implementations or factories. Most embedders should still
-// prefer the root `github.com/ewhauser/gbash` package and its higher-level
+// prefer the root `github.com/Lakeshore-Labs/gbash` package and its higher-level
 // filesystem helpers.
 package fs

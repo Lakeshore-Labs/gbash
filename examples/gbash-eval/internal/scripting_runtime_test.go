@@ -6,7 +6,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 func TestParseFlagArgsAcceptsExplicitBooleanValue(t *testing.T) {

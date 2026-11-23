@@ -6,7 +6,7 @@ import (
 	stdfs "io/fs"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func TestReusableSeededTrieKeepsSessionsIsolated(t *testing.T) {

@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
-	"github.com/ewhauser/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
 )
 
 const bashHelpRelease = "5.3.9"

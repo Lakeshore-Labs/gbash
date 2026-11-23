@@ -12,7 +12,7 @@ import (
 	"text/tabwriter"
 	"unicode"
 
-	"github.com/ewhauser/gbash/internal/shell/fileutil"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/fileutil"
 )
 
 // PrinterOption is a function which can be passed to NewPrinter

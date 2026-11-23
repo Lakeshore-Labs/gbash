@@ -1,10 +1,10 @@
-module github.com/ewhauser/gbash/contrib/htmltomarkdown
+module github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown
 
 go 1.26.0
 
 require (
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.0
-	github.com/ewhauser/gbash v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
 )
 
 require (
@@ -16,4 +16,4 @@ require (
 	golang.org/x/text v0.42.0 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..

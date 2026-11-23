@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 // TestCaptureBufferSpill writes more than the limit with a spill dir set and

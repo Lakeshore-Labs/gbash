@@ -9,8 +9,8 @@ import (
 	"io/fs"
 	"reflect"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/shell/syntax"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // access is similar to checking permission bits from [fs.FileInfo], but it uses

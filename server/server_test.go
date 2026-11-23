@@ -13,10 +13,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
-	gbserver "github.com/ewhauser/gbash/server"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	gbserver "github.com/Lakeshore-Labs/gbash/server"
 )
 
 type rpcResponse struct {

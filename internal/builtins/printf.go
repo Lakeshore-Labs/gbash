@@ -8,7 +8,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/ewhauser/gbash/internal/printfutil"
+	"github.com/Lakeshore-Labs/gbash/internal/printfutil"
 )
 
 type Printf struct{}

@@ -6,7 +6,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 type BashSourceMode int

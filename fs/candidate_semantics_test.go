@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func TestBenchmarkBackendsSymlinkSemantics(t *testing.T) {

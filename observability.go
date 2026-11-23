@@ -1,6 +1,6 @@
 package gbash
 
-import internalruntime "github.com/ewhauser/gbash/internal/runtime"
+import internalruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
 
 // TraceMode controls whether gbash records structured execution events.
 type TraceMode = internalruntime.TraceMode

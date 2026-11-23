@@ -4,7 +4,7 @@ import (
 	"slices"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 func TestRegisterAddsPythonAndPython3Commands(t *testing.T) {

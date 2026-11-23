@@ -17,9 +17,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/cli"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/cli"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type cliJSONTiming struct {

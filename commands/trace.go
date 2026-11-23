@@ -4,8 +4,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 func recordPolicyDenied(rec trace.Recorder, err error, action policy.FileAction, path, command string, exitCode int) {

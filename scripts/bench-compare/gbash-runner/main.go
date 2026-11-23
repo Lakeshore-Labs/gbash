@@ -8,7 +8,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 type options struct {

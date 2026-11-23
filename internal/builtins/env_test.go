@@ -7,7 +7,7 @@ import (
 	"strings"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 func TestEnvSupportsLongIgnoreEnvironmentIsolated(t *testing.T) {

@@ -3,7 +3,7 @@ package interp
 import (
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func TestChunkParseIncompleteUsesParseErrorMetadata(t *testing.T) {

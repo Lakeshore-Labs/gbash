@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 // execWithDeadline runs script in a fresh session and fails the test if it

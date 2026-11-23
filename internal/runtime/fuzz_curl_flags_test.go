@@ -4,8 +4,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func FuzzCurlFlagsCommand(f *testing.F) {

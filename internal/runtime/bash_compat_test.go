@@ -12,7 +12,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 )
 
 func TestShellScriptsMatchBashBehavior(t *testing.T) {

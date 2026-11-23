@@ -25,12 +25,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/commandutil"
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 // A Runner interprets shell programs. It can be reused, but it is not safe for

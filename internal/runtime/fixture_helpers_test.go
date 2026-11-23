@@ -9,7 +9,7 @@ import (
 	"sort"
 	"testing"
 
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type executionFixture struct {

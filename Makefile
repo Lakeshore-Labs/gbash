@@ -13,7 +13,7 @@ GORELEASER_VERSION ?= v2.14.3
 GOLANGCI_LINT_VERSION ?= v2.11.3
 GOLANGCI_LINT_BASE := GOTOOLCHAIN=go1.26.1 CGO_ENABLED=0 go run github.com/golangci/golangci-lint/v2/cmd/golangci-lint@$(GOLANGCI_LINT_VERSION)
 CUSTOM_GCL := $(CURDIR)/custom-gcl
-CUSTOM_GCL_REPO ?= ewhauser/gbash
+CUSTOM_GCL_REPO ?= Lakeshore-Labs/gbash
 GOLANGCI_LINT := $(if $(wildcard .custom-gcl.yml),$(CUSTOM_GCL),$(GOLANGCI_LINT_BASE))
 # Discover every main module in the active go.work so local lint matches CI.
 LINT_MODULE_DIRS_CMD = go list -m -f '{{if .Main}}{{.Dir}}{{end}}' all

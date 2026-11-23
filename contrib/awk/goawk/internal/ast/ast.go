@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	. "github.com/ewhauser/gbash/contrib/awk/goawk/lexer"
+	. "github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/lexer"
 )
 
 // Program is a parsed AWK program.

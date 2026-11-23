@@ -12,7 +12,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 	gosqlite "github.com/ncruces/go-sqlite3"
 	_ "github.com/ncruces/go-sqlite3/embed"
 )

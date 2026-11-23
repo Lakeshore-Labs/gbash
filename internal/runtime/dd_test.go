@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func execSessionScriptWithInput(t testing.TB, session *Session, script string, stdin []byte) *ExecutionResult {

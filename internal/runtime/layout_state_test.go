@@ -6,7 +6,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 func TestSessionExecSkipsLayoutReinitializationWhenUnchanged(t *testing.T) {

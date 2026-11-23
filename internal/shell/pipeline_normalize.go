@@ -1,7 +1,7 @@
 package shell
 
 import (
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 func normalizeExecutionProgram(program *syntax.File) map[*syntax.Stmt]*syntax.Stmt {

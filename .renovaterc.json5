@@ -12,8 +12,8 @@
       "description": "Internal Go modules are released together from this repository.",
       "matchManagers": ["gomod"],
       "matchPackageNames": [
-        "github.com/ewhauser/gbash",
-        "github.com/ewhauser/gbash/**"
+        "github.com/Lakeshore-Labs/gbash",
+        "github.com/Lakeshore-Labs/gbash/**"
       ],
       "enabled": false
     },

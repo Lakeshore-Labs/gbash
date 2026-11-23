@@ -3,7 +3,7 @@
 load test_helper
 
 # compat-docker-build.sh uses `cd -- dir` which gbash does not support.
-# See https://github.com/ewhauser/gbash/issues/297
+# See https://github.com/Lakeshore-Labs/gbash/issues/297
 #
 # These tests are written and ready to run once that issue is resolved.
 # To unblock them, remove the skip lines.
@@ -18,7 +18,7 @@ setup() {
 	mkdir -p "${SANDBOX}/state"
 
 	cat > "${SANDBOX}/go.mod" <<-'GOMOD'
-	module github.com/ewhauser/gbash
+	module github.com/Lakeshore-Labs/gbash
 
 	go 1.22.0
 	GOMOD

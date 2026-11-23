@@ -5,7 +5,7 @@ set -euo pipefail
 SCRIPT_PATH="${BASH_SOURCE[0]:-$0}"
 ROOT_DIR="$(cd "${SCRIPT_PATH%/*}/.." && pwd)"
 VERSION="${1:-${VERSION:-}}"
-ROOT_MODULE="github.com/ewhauser/gbash"
+ROOT_MODULE="github.com/Lakeshore-Labs/gbash"
 
 if [[ -n "${VERSION}" && "${VERSION}" != v* ]]; then
 	echo "version must look like vX.Y.Z" >&2

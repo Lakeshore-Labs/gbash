@@ -3,7 +3,7 @@ package runtime
 import (
 	"strings"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 // FileSystemConfig describes how a runtime session gets its sandbox filesystem

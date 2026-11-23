@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	gbasheval "github.com/ewhauser/gbash/examples/gbash-eval/internal"
+	gbasheval "github.com/Lakeshore-Labs/gbash/examples/gbash-eval/internal"
 )
 
 func main() {

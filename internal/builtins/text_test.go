@@ -8,9 +8,9 @@ import (
 	"testing"
 	"time"
 
-	gbash "github.com/ewhauser/gbash"
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/policy"
+	gbash "github.com/Lakeshore-Labs/gbash"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestGrepWorksInPipelineFromStdin(t *testing.T) {

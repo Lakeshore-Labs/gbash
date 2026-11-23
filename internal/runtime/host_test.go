@@ -9,9 +9,9 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	pubhost "github.com/ewhauser/gbash/host"
-	"github.com/ewhauser/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	pubhost "github.com/Lakeshore-Labs/gbash/host"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 var (

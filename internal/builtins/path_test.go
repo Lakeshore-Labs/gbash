@@ -10,8 +10,8 @@ import (
 	"testing"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/policy"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestTouchCreatesFilesAndPreservesExistingContent(t *testing.T) {

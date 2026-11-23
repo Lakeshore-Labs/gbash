@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/contrib/bashtool"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/contrib/bashtool"
 )
 
 type ScriptingToolCall struct {

@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 	"github.com/go-quicktest/qt"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"

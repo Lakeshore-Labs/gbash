@@ -7,9 +7,9 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/ast"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/resolver"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/lexer"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/ast"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/resolver"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/lexer"
 )
 
 // Program holds an entire compiled program.

@@ -3,7 +3,7 @@ package builtins
 import (
 	"context"
 
-	"github.com/ewhauser/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 func completionStateFromContext(ctx context.Context) *shellstate.CompletionState {

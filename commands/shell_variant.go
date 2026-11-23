@@ -1,6 +1,6 @@
 package commands
 
-import "github.com/ewhauser/gbash/shellvariant"
+import "github.com/Lakeshore-Labs/gbash/shellvariant"
 
 type ShellVariant = shellvariant.ShellVariant
 

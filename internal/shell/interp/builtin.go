@@ -20,12 +20,12 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
-	"github.com/ewhauser/gbash/internal/printfutil"
-	"github.com/ewhauser/gbash/internal/shellstate"
-	"github.com/ewhauser/gbash/shell/analysis"
-	"github.com/ewhauser/gbash/shell/expand"
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/printfutil"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/shell/analysis"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 // TODO: given the categories below, perhaps this should be more like:

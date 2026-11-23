@@ -15,8 +15,8 @@ import (
 	"time"
 	"unicode/utf8"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
 )
 
 // maxFinalEnvBytes caps the encoded size of final_env in one response.

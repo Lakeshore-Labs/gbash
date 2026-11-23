@@ -2,7 +2,7 @@
 // gbash.
 //
 // Most embedders should construct and run sandboxes through the root
-// `github.com/ewhauser/gbash` package and only import commands when they need
+// `github.com/Lakeshore-Labs/gbash` package and only import commands when they need
 // to:
 //
 //   - implement custom commands

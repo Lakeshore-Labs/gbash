@@ -12,7 +12,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 func TestCreateWorkspaceFixture(t *testing.T) {

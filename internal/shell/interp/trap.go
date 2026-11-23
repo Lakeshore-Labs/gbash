@@ -10,8 +10,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func (r *Runner) trapActions() map[trapID]trapAction {

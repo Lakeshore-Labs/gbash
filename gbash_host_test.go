@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/host"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/host"
 )
 
 func TestWithHostSystemPropagatesHostMetadata(t *testing.T) {

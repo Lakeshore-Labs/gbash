@@ -6,8 +6,8 @@ import (
 	"context"
 	"math"
 
-	"github.com/ewhauser/gbash/contrib/awk/goawk/internal/resolver"
-	"github.com/ewhauser/gbash/contrib/awk/goawk/parser"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/internal/resolver"
+	"github.com/Lakeshore-Labs/gbash/contrib/awk/goawk/parser"
 )
 
 const checkContextOps = 1000 // for efficiency, only check context every N instructions

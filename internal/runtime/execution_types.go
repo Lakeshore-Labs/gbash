@@ -5,8 +5,8 @@ import (
 	"maps"
 	"time"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type ExecutionRequest struct {

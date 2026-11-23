@@ -2,7 +2,7 @@
 package gclplugin
 
 import (
-	"github.com/ewhauser/gbash/tools/regexponce-gclplugin/regexponce"
+	"github.com/Lakeshore-Labs/gbash/tools/regexponce-gclplugin/regexponce"
 	"github.com/golangci/plugin-module-register/register"
 	"golang.org/x/tools/go/analysis"
 )

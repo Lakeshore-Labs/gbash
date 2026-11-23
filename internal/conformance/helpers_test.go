@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 )
 
 func TestArgvHelperScript(t *testing.T) {

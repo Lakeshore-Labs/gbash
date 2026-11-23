@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestGrepSupportsBREEREAndPatternSources(t *testing.T) {

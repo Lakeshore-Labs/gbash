@@ -4,7 +4,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ewhauser/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
 )
 
 type ShellVariant string

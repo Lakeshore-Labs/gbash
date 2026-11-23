@@ -1,9 +1,9 @@
-module github.com/ewhauser/gbash/contrib/yq
+module github.com/Lakeshore-Labs/gbash/contrib/yq
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
 	github.com/mikefarah/yq/v4 v4.52.4
 	gopkg.in/op/go-logging.v1 v1.0.0-20160211212156-b2cb9fa56473
 )
@@ -41,4 +41,4 @@ require (
 	golang.org/x/tools v0.49.0 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..

@@ -12,7 +12,7 @@ import (
 	"github.com/JohannesKaufmann/html-to-markdown/v2/converter"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/base"
 	"github.com/JohannesKaufmann/html-to-markdown/v2/plugin/commonmark"
-	"github.com/ewhauser/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/commands"
 )
 
 const htmlToMarkdownName = "html-to-markdown"

@@ -1,15 +1,21 @@
-module github.com/ewhauser/gbash/contrib/bashtool
+module github.com/Lakeshore-Labs/gbash/contrib/bashtool
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
-	github.com/ewhauser/gbash/contrib/extras v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
+	github.com/Lakeshore-Labs/gbash/contrib/extras v0.0.42
 )
 
 require (
 	github.com/JohannesKaufmann/dom v0.2.0 // indirect
 	github.com/JohannesKaufmann/html-to-markdown/v2 v2.5.0 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/awk v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/jq v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/python v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/sqlite3 v0.0.42 // indirect
+	github.com/Lakeshore-Labs/gbash/contrib/yq v0.0.42 // indirect
 	github.com/a8m/envsubst v1.4.3 // indirect
 	github.com/agext/levenshtein v1.2.1 // indirect
 	github.com/alecthomas/participle/v2 v2.1.4 // indirect
@@ -17,12 +23,6 @@ require (
 	github.com/dimchansky/utfbom v1.1.1 // indirect
 	github.com/ebitengine/purego v0.10.0 // indirect
 	github.com/elliotchance/orderedmap v1.8.0 // indirect
-	github.com/ewhauser/gbash/contrib/awk v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/htmltomarkdown v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/jq v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/python v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/sqlite3 v0.0.41 // indirect
-	github.com/ewhauser/gbash/contrib/yq v0.0.41 // indirect
 	github.com/ewhauser/gomonty v0.0.13 // indirect
 	github.com/fatih/color v1.18.0 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect
@@ -57,18 +57,18 @@ require (
 	gopkg.in/op/go-logging.v1 v1.0.0-20160211212156-b2cb9fa56473 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..
 
-replace github.com/ewhauser/gbash/contrib/extras => ../extras
+replace github.com/Lakeshore-Labs/gbash/contrib/extras => ../extras
 
-replace github.com/ewhauser/gbash/contrib/awk => ../awk
+replace github.com/Lakeshore-Labs/gbash/contrib/awk => ../awk
 
-replace github.com/ewhauser/gbash/contrib/htmltomarkdown => ../htmltomarkdown
+replace github.com/Lakeshore-Labs/gbash/contrib/htmltomarkdown => ../htmltomarkdown
 
-replace github.com/ewhauser/gbash/contrib/jq => ../jq
+replace github.com/Lakeshore-Labs/gbash/contrib/jq => ../jq
 
-replace github.com/ewhauser/gbash/contrib/python => ../python
+replace github.com/Lakeshore-Labs/gbash/contrib/python => ../python
 
-replace github.com/ewhauser/gbash/contrib/sqlite3 => ../sqlite3
+replace github.com/Lakeshore-Labs/gbash/contrib/sqlite3 => ../sqlite3
 
-replace github.com/ewhauser/gbash/contrib/yq => ../yq
+replace github.com/Lakeshore-Labs/gbash/contrib/yq => ../yq

@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 const historyEnvVar = "BASH_HISTORY"

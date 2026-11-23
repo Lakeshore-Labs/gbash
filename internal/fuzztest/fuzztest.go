@@ -8,10 +8,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/network"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/network"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const (

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 )
 
 const sqliteInfiniteRowsSQL = `WITH RECURSIVE c(x) AS (SELECT 1 UNION ALL SELECT x+1 FROM c) SELECT x FROM c;`

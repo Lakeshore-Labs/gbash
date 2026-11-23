@@ -4,7 +4,7 @@ import (
 	"io"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 func TestSubshellEnvSnapshotIsolation(t *testing.T) {

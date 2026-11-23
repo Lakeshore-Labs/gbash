@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 )
 
 func TestNewRunsSimpleScript(t *testing.T) {

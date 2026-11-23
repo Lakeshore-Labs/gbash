@@ -7,7 +7,7 @@ import (
 	"os"
 	"testing"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 type statCountingFS struct {

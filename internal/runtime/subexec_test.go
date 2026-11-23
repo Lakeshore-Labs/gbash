@@ -7,9 +7,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/commands"
-	"github.com/ewhauser/gbash/internal/builtins"
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/commands"
+	"github.com/Lakeshore-Labs/gbash/internal/builtins"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 type subexecProbe struct{}

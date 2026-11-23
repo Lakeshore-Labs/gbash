@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 	"github.com/go-quicktest/qt"
 )
 

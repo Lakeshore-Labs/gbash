@@ -13,8 +13,8 @@ import (
 
 	"github.com/go-quicktest/qt"
 
-	"github.com/ewhauser/gbash/shell/syntax"
-	"github.com/ewhauser/gbash/shell/syntax/typedjson"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax"
+	"github.com/Lakeshore-Labs/gbash/shell/syntax/typedjson"
 )
 
 var update = flag.Bool("u", false, "update output files")

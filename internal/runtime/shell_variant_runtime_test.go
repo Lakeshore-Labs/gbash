@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ewhauser/gbash/shellvariant"
+	"github.com/Lakeshore-Labs/gbash/shellvariant"
 )
 
 func TestSessionExecNonBashVariantsLeaveBashNamespaceUnset(t *testing.T) {

@@ -10,8 +10,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ewhauser/gbash"
-	gbashtrace "github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash"
+	gbashtrace "github.com/Lakeshore-Labs/gbash/trace"
 	"go.opentelemetry.io/otel/attribute"
 	"go.opentelemetry.io/otel/codes"
 	stdoutlog "go.opentelemetry.io/otel/exporters/stdout/stdoutlog"
@@ -25,7 +25,7 @@ import (
 
 const (
 	serviceName      = "gbash-example-otel"
-	instrumentation  = "github.com/ewhauser/gbash/examples/otel"
+	instrumentation  = "github.com/Lakeshore-Labs/gbash/examples/otel"
 	demoFile         = "/tmp/otel-session-demo.txt"
 	demoFileContents = "hello from gbash session"
 	firstExecName    = "seed-file"

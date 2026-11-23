@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/shell/interp"
-	"github.com/ewhauser/gbash/internal/shellstate"
+	"github.com/Lakeshore-Labs/gbash/internal/shell/interp"
+	"github.com/Lakeshore-Labs/gbash/internal/shellstate"
 )
 
 type Kill struct{}

@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 const totalVariableLimitMessage = "total variable size too large (limit "

@@ -7,7 +7,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 func TestWithModuleLoaderError(t *testing.T) {

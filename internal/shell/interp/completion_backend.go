@@ -10,9 +10,9 @@ import (
 	"slices"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
-	shellpattern "github.com/ewhauser/gbash/internal/shellpattern"
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
+	shellpattern "github.com/Lakeshore-Labs/gbash/internal/shellpattern"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 type runnerCompletionBackend struct {

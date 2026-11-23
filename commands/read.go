@@ -6,7 +6,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 )
 
 // ReadAll reads reader into memory while honoring ctx cancellation and

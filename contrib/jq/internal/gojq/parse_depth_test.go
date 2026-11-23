@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 func TestParseRejectsDeepNesting(t *testing.T) {

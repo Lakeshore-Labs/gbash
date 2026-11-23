@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/ewhauser/gbash/trace"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 type TraceMode uint8

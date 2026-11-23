@@ -5,7 +5,7 @@ import (
 	stdfs "io/fs"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/commandutil"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 	"golang.org/x/term"
 )
 

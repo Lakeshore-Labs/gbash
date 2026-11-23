@@ -1,9 +1,9 @@
-module github.com/ewhauser/gbash/contrib/python
+module github.com/Lakeshore-Labs/gbash/contrib/python
 
 go 1.26.0
 
 require (
-	github.com/ewhauser/gbash v0.0.41
+	github.com/Lakeshore-Labs/gbash v0.0.42
 	github.com/ewhauser/gomonty v0.0.13
 	golang.org/x/term v0.45.0
 )
@@ -18,4 +18,4 @@ require (
 	golang.org/x/text v0.41.0 // indirect
 )
 
-replace github.com/ewhauser/gbash => ../..
+replace github.com/Lakeshore-Labs/gbash => ../..

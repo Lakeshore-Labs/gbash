@@ -11,7 +11,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ewhauser/gbash/internal/completionutil"
+	"github.com/Lakeshore-Labs/gbash/internal/completionutil"
 )
 
 type Bash struct {

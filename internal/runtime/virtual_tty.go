@@ -12,8 +12,8 @@ import (
 	"syscall"
 	"time"
 
-	gbfs "github.com/ewhauser/gbash/fs"
-	"github.com/ewhauser/gbash/internal/commandutil"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
+	"github.com/Lakeshore-Labs/gbash/internal/commandutil"
 	"golang.org/x/term"
 )
 

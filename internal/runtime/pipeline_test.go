@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/ewhauser/gbash/internal/testutil"
+	"github.com/Lakeshore-Labs/gbash/internal/testutil"
 )
 
 func TestPipelineStateMatchesBashBehavior(t *testing.T) {

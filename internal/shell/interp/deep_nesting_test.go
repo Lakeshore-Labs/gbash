@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/ewhauser/gbash/shell/expand"
+	"github.com/Lakeshore-Labs/gbash/shell/expand"
 )
 
 // countingEnviron counts lookups that reach the bottom of an environ chain.

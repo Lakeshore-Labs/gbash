@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
+	gbruntime "github.com/Lakeshore-Labs/gbash"
 	"github.com/dop251/goja"
-	gbruntime "github.com/ewhauser/gbash"
 )
 
 func runNodeScript(t *testing.T, js string) *gbruntime.ExecutionResult {

@@ -6,7 +6,7 @@ import (
 	"os"
 	"path"
 
-	gbfs "github.com/ewhauser/gbash/fs"
+	gbfs "github.com/Lakeshore-Labs/gbash/fs"
 )
 
 // SeedTemplate initializes dbPath with the provided initial files so benchmark

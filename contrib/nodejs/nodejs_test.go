@@ -7,9 +7,9 @@ import (
 	"testing"
 	"time"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/policy"
-	"github.com/ewhauser/gbash/trace"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/policy"
+	"github.com/Lakeshore-Labs/gbash/trace"
 )
 
 func TestRegisterAddsNodeJSCommand(t *testing.T) {

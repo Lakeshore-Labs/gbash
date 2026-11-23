@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	rootcli "github.com/ewhauser/gbash/cli"
+	rootcli "github.com/Lakeshore-Labs/gbash/cli"
 )
 
 const continuationPrompt = "> "

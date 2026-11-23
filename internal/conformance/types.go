@@ -3,7 +3,7 @@ package conformance
 import (
 	"strings"
 
-	gbruntime "github.com/ewhauser/gbash/internal/runtime"
+	gbruntime "github.com/Lakeshore-Labs/gbash/internal/runtime"
 )
 
 type SpecFile struct {

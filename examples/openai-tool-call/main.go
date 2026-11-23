@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/ewhauser/gbash"
+	"github.com/Lakeshore-Labs/gbash"
 	"github.com/openai/openai-go"
 	"github.com/openai/openai-go/responses"
 )

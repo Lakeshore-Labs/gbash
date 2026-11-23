@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/ewhauser/gbash/examples/internal/agentfsfs"
+	"github.com/Lakeshore-Labs/gbash/examples/internal/agentfsfs"
 )
 
 const defaultWorkDir = "/home/agent"

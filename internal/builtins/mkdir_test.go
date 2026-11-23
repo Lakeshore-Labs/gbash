@@ -7,8 +7,8 @@ import (
 	"strings"
 	"testing"
 
-	gbruntime "github.com/ewhauser/gbash"
-	"github.com/ewhauser/gbash/policy"
+	gbruntime "github.com/Lakeshore-Labs/gbash"
+	"github.com/Lakeshore-Labs/gbash/policy"
 )
 
 func TestMkdirSupportsModeFlags(t *testing.T) {

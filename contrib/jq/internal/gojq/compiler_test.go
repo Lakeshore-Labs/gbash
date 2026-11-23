@@ -12,7 +12,7 @@ import (
 	"time"
 	"unsafe"
 
-	"github.com/ewhauser/gbash/contrib/jq/internal/gojq"
+	"github.com/Lakeshore-Labs/gbash/contrib/jq/internal/gojq"
 )
 
 func ExampleCompile() {
