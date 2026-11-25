@@ -830,49 +830,60 @@ func (r *Runner) unTest(ctx context.Context, op syntax.UnTestOperator, x, cmdNam
 }
 
 // sameFile reports whether info1 and info2 describe the same file.
-// It first tries os.SameFile which works for real filesystems, then falls back
-// to comparing NodeID for memory filesystems or DeviceID/Inode for filesystems
-// that provide those via the FileIdentity interface.
+// It first tries os.SameFile, which works for information that came straight
+// from the os package. A host-backed filesystem wraps its information, which
+// os.SameFile refuses, so the device and inode of Sys are compared next, then
+// the FileIdentity interface, then the NodeID of the memory filesystem.
 func sameFile(info1, info2 fs.FileInfo) bool {
 	if os.SameFile(info1, info2) {
 		return true
+	}
+	sys1, sys2 := info1.Sys(), info2.Sys()
+	dev1, okDev1 := sysUint(sys1, "Dev")
+	dev2, okDev2 := sysUint(sys2, "Dev")
+	ino1, okIno1 := sysUint(sys1, "Ino")
+	ino2, okIno2 := sysUint(sys2, "Ino")
+	if okDev1 && okDev2 && okIno1 && okIno2 { // else a later check decides
+		return dev1 == dev2 && ino1 == ino2
 	}
 	// Try FileIdentity interface for sandbox filesystems
 	type fileIdentity interface {
 		FileIdentity() (deviceID, inode uint64)
 	}
-	if fi1, ok := info1.Sys().(fileIdentity); ok {
-		if fi2, ok := info2.Sys().(fileIdentity); ok {
+	if fi1, ok := sys1.(fileIdentity); ok {
+		if fi2, ok := sys2.(fileIdentity); ok {
 			dev1, ino1 := fi1.FileIdentity()
 			dev2, ino2 := fi2.FileIdentity()
 			return dev1 == dev2 && ino1 == ino2
 		}
 	}
 	// Check for structs with NodeID field (used by MemoryFS)
-	sys1, sys2 := info1.Sys(), info2.Sys()
-	if id1, ok := getNodeID(sys1); ok {
-		if id2, ok := getNodeID(sys2); ok {
+	if id1, ok := sysUint(sys1, "NodeID"); ok {
+		if id2, ok := sysUint(sys2, "NodeID"); ok {
 			return id1 == id2 && id1 != 0
 		}
 	}
 	return false
 }
 
-// getNodeID extracts a NodeID field from a struct using reflection.
-func getNodeID(v any) (uint64, bool) {
-	if v == nil {
-		return 0, false
-	}
+// sysUint reads an integer field of a struct, or of a pointer to one, by
+// name: the device, inode or node id that a file's Sys carries.
+func sysUint(v any, name string) (uint64, bool) {
 	rv := reflect.ValueOf(v)
-	if rv.Kind() == reflect.Ptr {
+	if rv.Kind() == reflect.Pointer { // of a nil pointer, the zero Value, which is no struct
 		rv = rv.Elem()
 	}
 	if rv.Kind() != reflect.Struct {
 		return 0, false
 	}
-	field := rv.FieldByName("NodeID")
-	if !field.IsValid() || field.Kind() != reflect.Uint64 {
+	field := rv.FieldByName(name)
+	switch {
+	case !field.IsValid():
 		return 0, false
+	case field.CanUint():
+		return field.Uint(), true
+	case field.CanInt(): // a device is a signed integer on some systems
+		return uint64(field.Int()), true //nolint:gosec // an identity, compared for equality only
 	}
-	return field.Uint(), true
+	return 0, false
 }
