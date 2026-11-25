@@ -839,12 +839,12 @@ func sameFile(info1, info2 fs.FileInfo) bool {
 		return true
 	}
 	sys1, sys2 := info1.Sys(), info2.Sys()
-	if dev1, ok := sysUint(sys1, "Dev"); ok {
-		if dev2, ok := sysUint(sys2, "Dev"); ok {
-			ino1, ok1 := sysUint(sys1, "Ino")
-			ino2, ok2 := sysUint(sys2, "Ino")
-			return ok1 && ok2 && dev1 == dev2 && ino1 == ino2
-		}
+	dev1, okDev1 := sysUint(sys1, "Dev")
+	dev2, okDev2 := sysUint(sys2, "Dev")
+	ino1, okIno1 := sysUint(sys1, "Ino")
+	ino2, okIno2 := sysUint(sys2, "Ino")
+	if okDev1 && okDev2 && okIno1 && okIno2 { // else a later check decides
+		return dev1 == dev2 && ino1 == ino2
 	}
 	// Try FileIdentity interface for sandbox filesystems
 	type fileIdentity interface {
@@ -870,7 +870,7 @@ func sameFile(info1, info2 fs.FileInfo) bool {
 // name: the device, inode or node id that a file's Sys carries.
 func sysUint(v any, name string) (uint64, bool) {
 	rv := reflect.ValueOf(v)
-	if rv.Kind() == reflect.Pointer && !rv.IsNil() {
+	if rv.Kind() == reflect.Pointer { // of a nil pointer, the zero Value, which is no struct
 		rv = rv.Elem()
 	}
 	if rv.Kind() != reflect.Struct {
